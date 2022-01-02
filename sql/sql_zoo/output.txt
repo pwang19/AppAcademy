@@ -1,0 +1,1075 @@
+
+SELECT basics
+  select_population_of_germany
+.    selects the population of Germany
+  per_capita_gdp
+.    selects the per capita GDP of large countries
+  small_and_wealthy
+.    selects countries with an area under 2,000 and a GDP over 5 billion
+  scandinavia
+.    shows the names and populations of Scandinavian countries
+  starts_with_g
+.    selects countries whose names start with G
+  just_the_right_size
+.    selects countries within the size constraints
+
+SELECT from world
+  large_countries
+.    selects the names of countries with over 200 million people
+  high_population_gdps
+.    selects names and per capita GDPs
+  population_in_millions
+.    selects the population in millions of countries in South America
+  name_and_population
+.    selects the name and population of the specified countries
+  united_we_stand
+.    shows countries whose names contain "United"
+
+SELECT from nobel
+  prizes_from_1950
+.    selects nobel prizes from 1950
+  literature_1962
+.    selects the winner of the literature prize in 1962
+  einstein_prize
+.    selects the year and subject in which Albert Einstein won his prize
+  millennial_peace_prizes
+.    selects peace prize winners since 2000
+  eighties_literature
+.    shows details of 1980s literature prize winners
+  presidential_prizes
+.    shows details of presidential Nobel winners
+  nobel_johns
+.    shows winners with the first name John
+
+nobel bonus problems
+  physics_no_chemistry
+.    shows years in which physics prizes (but not chemistry) were awarded
+
+SELECT within SELECT
+  larger_than_russia
+.    selects countries with a population larger than Russia
+  richer_than_england
+.    selects countries with a higher per capita GDP than the UK
+  neighbors_of_certain_b_countries
+.    selects the correct names and continents
+  population_constraint
+.    selects countries with a population between Poland and Canada
+  sparse_continents
+.    selects countries in sparsely populated continents
+
+countries bonus
+  highest_gdp
+.    selects countries with higher GDPs than all European countries
+  largest_in_continent
+F    selects the countries with the largest areas in their continents (FAILED - 1)
+  large_neighbors
+F    selects countries with much higher populations than their neighbors (FAILED - 2)
+
+Aggregate queries
+  continents
+.    lists all the continents once each
+  africa_gdp
+.    gives the total GDP of Africa
+  area_count
+.    selects the countries with an area of more than 1 million
+  group_population
+.    sums the population for the given countries
+  country_counts
+F    shows the name and number of countries of each continent (FAILED - 3)
+  populous_country_counts
+F    shows the number of populous countries for each continent (FAILED - 4)
+  populous_continents
+F    shows the continents with total populations over 100 million (FAILED - 5)
+
+JOIN warmup
+  films_from_sixty_two
+F    selects films from the year 1962 (FAILED - 6)
+  year_of_kane
+F    selects the year that Citizen Kane was released (FAILED - 7)
+  trek_films
+F    selects all Star Trek films and orders them by year (FAILED - 8)
+  films_by_id
+F    selects the names of the films with the given IDs (FAILED - 9)
+  glenn_close_id
+F    selects the ID of actress Glenn Close (FAILED - 10)
+  casablanca_id
+F    selects the ID of the film Casablanca (FAILED - 11)
+  casablanca_cast
+F    selects the cast of the film Casablanca (FAILED - 12)
+  alien_cast
+F    selects the cast of the film Alien (FAILED - 13)
+
+JOIN exercises
+  ford_films
+F    selects films in which actor Harrison Ford played (FAILED - 14)
+  ford_supporting_films
+F    selects films in which Harrison Ford played but did not lead (FAILED - 15)
+  films_and_stars_from_sixty_two
+F    lists the titles and stars of all 1962 films (FAILED - 16)
+  travoltas_busiest_years
+F    selects the year and number of movies of John Travolta's busy years (FAILED - 17)
+  andrews_films_and_leads
+F    selects the titles and lead actors of films Julie Andrews played in (FAILED - 18)
+  prolific_actors
+F    selects and orders the actors who have had at least 15 starring roles (FAILED - 19)
+  films_by_cast_size
+F    selects 1978 films and orders by cast size (FAILED - 20)
+  colleagues_of_garfunkel
+F    selects actors who have worked with Art Garfunkel (FAILED - 21)
+
+music JOINs
+  alison_artist
+F    selects the artist who recorded 'Alison' (FAILED - 22)
+  exodus_artist
+F    selects the artist who recorded 'Exodus' (FAILED - 23)
+  blur_songs
+F    selects the songs on the album 'Blur' (FAILED - 24)
+  heart_tracks
+F    selects albums with songs containing the word 'Heart' (FAILED - 25)
+  title_tracks
+F    selects the names of all title tracks (FAILED - 26)
+  eponymous_albums
+F    selects the names of all eponymous albums (FAILED - 27)
+  song_title_counts
+F    selects the names and counts of songs that appear on more than two albums (FAILED - 28)
+  best_value
+F    selects the title, price, and track count of high-value albums (FAILED - 29)
+  top_track_counts
+F    selects the titles and track counts of large albums (FAILED - 30)
+  rock_superstars
+F    selects the name of the most prolific rock artist (FAILED - 31)
+  expensive_tastes
+F    selects the five genres that cost the most per track (FAILED - 32)
+
+using NULL
+  null_dept
+F    selects teachers who have NULL as their department (FAILED - 33)
+  all_teachers_join
+F    displays all of the teachers in a joined table (FAILED - 34)
+  all_depts_join
+F    displays all of the departments in a joined table (FAILED - 35)
+  teachers_and_mobiles
+F    displays teachers' mobile numbers, or a default if none exists (FAILED - 36)
+  teachers_and_depts
+F    displays teachers and their departments, or 'None' if they have none (FAILED - 37)
+  num_teachers_and_mobiles
+F    shows the number of teachers and the number of mobile numbers (FAILED - 38)
+  dept_staff_counts
+F    shows the name and number of staff of each department (FAILED - 39)
+  teachers_and_divisions
+F    shows the name and division of teachers (FAILED - 40)
+  teachers_and_divisions_two
+F    shows the name and division of teachers, or 'None' if they have none (FAILED - 41)
+
+self-JOIN exercises
+  num_stops
+F    shows the number of stops in the table (FAILED - 42)
+  craiglockhart_id
+F    shows the ID of the stop Craiglockhart (FAILED - 43)
+  lrt_stops
+F    shows the ids and names of stops on the 4 LRT service (FAILED - 44)
+  connecting_routes
+F    shows the routes that connect London Road with Craiglockhart (FAILED - 45)
+  cl_to_lr
+F    shows routes from Craiglockhart to London Road (FAILED - 46)
+  cl_to_lr_by_name
+F    shows routes from Craiglockhart to London Road (FAILED - 47)
+  haymarket_and_leith
+F    shows services connecting Haymarket and Leith (FAILED - 48)
+  craiglockhart_and_tollcross
+F    shows services connecting Craiglockhart and Tollcross (FAILED - 49)
+  start_at_craiglockhart
+F    shows stops that can be reached by taking one bus from Craiglockhart (FAILED - 50)
+  craiglockhart_to_sighthill
+F    shows routes involving two buses from Craiglockhart to Sighthill (FAILED - 51)
+
+
+Failures:
+
+  1) countries bonus largest_in_continent selects the countries with the largest areas in their continents
+     Failure/Error: expect(largest_in_continent).to contain_exactly(
+     PG::SyntaxError:
+       ERROR:  syntax error at or near "GROUP"
+       LINE 9:     GROUP BY
+                   ^
+     # ./lib/sqlzoo.rb:5:in `exec'
+     # ./lib/sqlzoo.rb:5:in `execute'
+     # ./lib/04a_countries_bonus.rb:39:in `largest_in_continent'
+     # ./spec/04a_countries_bonus_spec.rb:16:in `block (3 levels) in <top (required)>'
+
+  2) countries bonus large_neighbors selects countries with much higher populations than their neighbors
+     Failure/Error: expect(large_neighbors).to contain_exactly(
+       expected collection contained:  [["Brazil", "South America"], ["China", "Asia-Pacific"], ["India", "South Asia"]]
+       actual collection contained:    []
+       the missing elements were:      [["Brazil", "South America"], ["China", "Asia-Pacific"], ["India", "South Asia"]]
+     # ./spec/04a_countries_bonus_spec.rb:31:in `block (3 levels) in <top (required)>'
+
+  3) Aggregate queries country_counts shows the name and number of countries of each continent
+     Failure/Error: expect(country_counts).to contain_exactly(
+     PG::GroupingError:
+       ERROR:  column "countries.continent" must appear in the GROUP BY clause or be used in an aggregate function
+       LINE 2:       continent,
+                     ^
+     # ./lib/sqlzoo.rb:5:in `exec'
+     # ./lib/sqlzoo.rb:5:in `execute'
+     # ./lib/05_aggregates.rb:70:in `country_counts'
+     # ./spec/05_aggregates_spec.rb:46:in `block (3 levels) in <top (required)>'
+
+  4) Aggregate queries populous_country_counts shows the number of populous countries for each continent
+     Failure/Error: expect(populous_country_counts).to contain_exactly(
+     PG::GroupingError:
+       ERROR:  column "countries.continent" must appear in the GROUP BY clause or be used in an aggregate function
+       LINE 2:       continent,
+                     ^
+     # ./lib/sqlzoo.rb:5:in `exec'
+     # ./lib/sqlzoo.rb:5:in `execute'
+     # ./lib/05_aggregates.rb:82:in `populous_country_counts'
+     # ./spec/05_aggregates_spec.rb:61:in `block (3 levels) in <top (required)>'
+
+  5) Aggregate queries populous_continents shows the continents with total populations over 100 million
+     Failure/Error: expect(populous_continents).to contain_exactly(
+     PG::GroupingError:
+       ERROR:  aggregate functions are not allowed in WHERE
+       LINE 6:       COUNT(population) > 100000000
+                     ^
+     # ./lib/sqlzoo.rb:5:in `exec'
+     # ./lib/sqlzoo.rb:5:in `execute'
+     # ./lib/05_aggregates.rb:95:in `populous_continents'
+     # ./spec/05_aggregates_spec.rb:76:in `block (3 levels) in <top (required)>'
+
+  6) JOIN warmup films_from_sixty_two selects films from the year 1962
+     Failure/Error: expect(films_from_sixty_two).to contain_exactly(
+       expected collection contained:  [["1082", "Music Man, The"], ["121", "To Kill a Mockingbird"], ["1496", "What Ever Happened to Baby Jane?"], ["1751", "Cape Fear"], ["479", "Dr. No"]]
+       actual collection contained:    []
+       the missing elements were:      [["1082", "Music Man, The"], ["121", "To Kill a Mockingbird"], ["1496", "What Ever Happened to Baby Jane?"], ["1751", "Cape Fear"], ["479", "Dr. No"]]
+     # ./spec/06_joins_warmup_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  7) JOIN warmup year_of_kane selects the year that Citizen Kane was released
+     Failure/Error: expect(year_of_kane).to contain_exactly(["1941"])
+       expected collection contained:  [["1941"]]
+       actual collection contained:    []
+       the missing elements were:      [["1941"]]
+     # ./spec/06_joins_warmup_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+  8) JOIN warmup trek_films selects all Star Trek films and orders them by year
+     Failure/Error: expect(trek_films).to eq([
+       
+       expected: [["402", "Star Trek: The Motion Picture", "1979"], ["209", "Star Trek: The Wrath of Khan", "1982"], ["438", "Star Trek III: The Search for Spock", "1984"], ["349", "Star Trek IV: The Voyage Home", "1986"], ["472", "Star Trek V: The Final Frontier", "1989"], ["410", "Star Trek VI: The Undiscovered Country", "1991"], ["280", "Star Trek: Generations", "1994"], ["68", "Star Trek: First Contact", "1996"], ["252", "Star Trek: Insurrection", "1998"]]
+            got: []
+       
+       (compared using ==)
+     # ./spec/06_joins_warmup_spec.rb:25:in `block (3 levels) in <top (required)>'
+
+  9) JOIN warmup films_by_id selects the names of the films with the given IDs
+     Failure/Error: expect(films_by_id).to contain_exactly(
+       expected collection contained:  [["Big Momma's House"], ["Power of One, The"], ["To Be or Not to Be"]]
+       actual collection contained:    []
+       the missing elements were:      [["Big Momma's House"], ["Power of One, The"], ["To Be or Not to Be"]]
+     # ./spec/06_joins_warmup_spec.rb:41:in `block (3 levels) in <top (required)>'
+
+  10) JOIN warmup glenn_close_id selects the ID of actress Glenn Close
+     Failure/Error: expect(glenn_close_id).to contain_exactly(["104"])
+       expected collection contained:  [["104"]]
+       actual collection contained:    []
+       the missing elements were:      [["104"]]
+     # ./spec/06_joins_warmup_spec.rb:51:in `block (3 levels) in <top (required)>'
+
+  11) JOIN warmup casablanca_id selects the ID of the film Casablanca
+     Failure/Error: expect(casablanca_id).to contain_exactly(["27"])
+       expected collection contained:  [["27"]]
+       actual collection contained:    []
+       the missing elements were:      [["27"]]
+     # ./spec/06_joins_warmup_spec.rb:57:in `block (3 levels) in <top (required)>'
+
+  12) JOIN warmup casablanca_cast selects the cast of the film Casablanca
+     Failure/Error: expect(casablanca_cast).to contain_exactly(
+       expected collection contained:  [["Claude Rains"], ["Conrad Veidt"], ["Curt Bois"], ["Humphrey Bogart"], ["Ingrid Bergman"], ["John Qualen"], ["Madeleine LeBeau"], ["Paul Henreid"], ["Peter Lorre"]]
+       actual collection contained:    []
+       the missing elements were:      [["Claude Rains"], ["Conrad Veidt"], ["Curt Bois"], ["Humphrey Bogart"], ["Ingrid Bergman"], ["John Qualen"], ["Madeleine LeBeau"], ["Paul Henreid"], ["Peter Lorre"]]
+     # ./spec/06_joins_warmup_spec.rb:63:in `block (3 levels) in <top (required)>'
+
+  13) JOIN warmup alien_cast selects the cast of the film Alien
+     Failure/Error: expect(alien_cast).to contain_exactly(
+       expected collection contained:  [["Harry Dean Stanton"], ["Ian Holm"], ["John Hurt"], ["Sigourney Weaver"], ["Tom Skerritt"], ["Veronica Cartwright"], ["Yaphet Kotto"]]
+       actual collection contained:    []
+       the missing elements were:      [["Harry Dean Stanton"], ["Ian Holm"], ["John Hurt"], ["Sigourney Weaver"], ["Tom Skerritt"], ["Veronica Cartwright"], ["Yaphet Kotto"]]
+     # ./spec/06_joins_warmup_spec.rb:79:in `block (3 levels) in <top (required)>'
+
+  14) JOIN exercises ford_films selects films in which actor Harrison Ford played
+     Failure/Error: expect(ford_films).to contain_exactly(
+       expected collection contained:  [["Air Force One"], ["American Graffiti"], ["Apocalypse Now"], ["Blade Runner"], ["Clear and Present Danger"], ["Conversation, The"], ["Devil's Own, The"], ["Frantic"], ["Fugitive, The"], ["Indiana Jones and the Last Crusade"], ["Indiana Jones and the Temple of Doom"], ["Mosquito Coast, The"], ["Patriot Games"], ["Presumed Innocent"], ["Raiders of the Lost Ark"], ["Random Hearts"], ["Regarding Henry"], ["Sabrina"], ["Six Days Seven Nights"], ["Star Wars"], ["Star Wars: Episode V - The Empire Strikes Back"], ["Star Wars: Episode VI - Return of the Jedi"], ["What Lies Beneath"], ["Witness"], ["Working Girl"]]
+       actual collection contained:    []
+       the missing elements were:      [["Air Force One"], ["American Graffiti"], ["Apocalypse Now"], ["Blade Runner"], ["Clear and Present Danger"], ["Conversation, The"], ["Devil's Own, The"], ["Frantic"], ["Fugitive, The"], ["Indiana Jones and the Last Crusade"], ["Indiana Jones and the Temple of Doom"], ["Mosquito Coast, The"], ["Patriot Games"], ["Presumed Innocent"], ["Raiders of the Lost Ark"], ["Random Hearts"], ["Regarding Henry"], ["Sabrina"], ["Six Days Seven Nights"], ["Star Wars"], ["Star Wars: Episode V - The Empire Strikes Back"], ["Star Wars: Episode VI - Return of the Jedi"], ["What Lies Beneath"], ["Witness"], ["Working Girl"]]
+     # ./spec/07_joins_exercises_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  15) JOIN exercises ford_supporting_films selects films in which Harrison Ford played but did not lead
+     Failure/Error: expect(ford_supporting_films).to contain_exactly(
+       expected collection contained:  [["American Graffiti"], ["Apocalypse Now"], ["Conversation, The"], ["Star Wars"], ["Star Wars: Episode V - The Empire Strikes Back"], ["Star Wars: Episode VI - Return of the Jedi"]]
+       actual collection contained:    []
+       the missing elements were:      [["American Graffiti"], ["Apocalypse Now"], ["Conversation, The"], ["Star Wars"], ["Star Wars: Episode V - The Empire Strikes Back"], ["Star Wars: Episode VI - Return of the Jedi"]]
+     # ./spec/07_joins_exercises_spec.rb:39:in `block (3 levels) in <top (required)>'
+
+  16) JOIN exercises films_and_stars_from_sixty_two lists the titles and stars of all 1962 films
+     Failure/Error: expect(films_and_stars_from_sixty_two).to contain_exactly(
+       expected collection contained:  [["Cape Fear", "Gregory Peck"], ["Dr. No", "Sean Connery"], ["Music Man, The", "Robert Preston (I)"], ["To Kill a Mockingbird", "Gregory Peck"], ["What Ever Happened to Baby Jane?", "Bette Davis"]]
+       actual collection contained:    []
+       the missing elements were:      [["Cape Fear", "Gregory Peck"], ["Dr. No", "Sean Connery"], ["Music Man, The", "Robert Preston (I)"], ["To Kill a Mockingbird", "Gregory Peck"], ["What Ever Happened to Baby Jane?", "Bette Davis"]]
+     # ./spec/07_joins_exercises_spec.rb:52:in `block (3 levels) in <top (required)>'
+
+  17) JOIN exercises travoltas_busiest_years selects the year and number of movies of John Travolta's busy years
+     Failure/Error: expect(travoltas_busiest_years).to contain_exactly(
+       expected collection contained:  [["1996", "2"], ["1998", "2"]]
+       actual collection contained:    []
+       the missing elements were:      [["1996", "2"], ["1998", "2"]]
+     # ./spec/07_joins_exercises_spec.rb:64:in `block (3 levels) in <top (required)>'
+
+  18) JOIN exercises andrews_films_and_leads selects the titles and lead actors of films Julie Andrews played in
+     Failure/Error: expect(andrews_films_and_leads).to contain_exactly(
+       expected collection contained:  [["10", "Dudley Moore"], ["Sound of Music, The", "Julie Andrews"], ["Victor/Victoria", "Julie Andrews"]]
+       actual collection contained:    []
+       the missing elements were:      [["10", "Dudley Moore"], ["Sound of Music, The", "Julie Andrews"], ["Victor/Victoria", "Julie Andrews"]]
+     # ./spec/07_joins_exercises_spec.rb:73:in `block (3 levels) in <top (required)>'
+
+  19) JOIN exercises prolific_actors selects and orders the actors who have had at least 15 starring roles
+     Failure/Error: expect(prolific_actors).to eq([
+       
+       expected: [["Al Pacino"], ["Arnold Schwarzenegger"], ["Clint Eastwood"], ["Harrison Ford"], ["Robert De Niro"], ["Robin Williams"], ["Sean Connery"], ["Sylvester Stallone"], ["Tom Hanks"]]
+            got: []
+       
+       (compared using ==)
+     # ./spec/07_joins_exercises_spec.rb:83:in `block (3 levels) in <top (required)>'
+
+  20) JOIN exercises films_by_cast_size selects 1978 films and orders by cast size
+     Failure/Error: expect(films_by_cast_size).to eq([
+       
+       expected: [["Death on the Nile", "12"], ["Capricorn One", "11"], ["Foul Play", "11"], ["Heaven Can Wait", "11"], ["Animal House", "9"], ["Boys from Brazil, The", "9"], ["Midnight Express", "9"], ["Superman", "9"], ["Watership Down", "9"], ["Deer Hunter, The", "8"], ["Grease", "8"], ["Halloween", "8"], ["Attack of the Killer Tomatoes!", "7"], ["Coma", "7"], ["Damien: Omen II", "7"], ["Days of Heaven", "6"], ["Up in Smoke", "6"], ["Dawn of the Dead", "5"]]
+            got: []
+       
+       (compared using ==)
+     # ./spec/07_joins_exercises_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+  21) JOIN exercises colleagues_of_garfunkel selects actors who have worked with Art Garfunkel
+     Failure/Error: expect(colleagues_of_garfunkel).to contain_exactly(
+       expected collection contained:  [["Alan Arkin"], ["Anthony Perkins"], ["Bill Paxton"], ["Bob Balaban"], ["Bob Newhart"], ["Buck Henry"], ["Jack Gilford"], ["Jon Voight"], ["Julian Sands"], ["Kurtwood Smith"], ["Martin Balsam"], ["Martin Sheen"], ["Norman Fell"], ["Orson Welles"], ["Richard Benjamin"], ["Sherilyn Fenn"]]
+       actual collection contained:    []
+       the missing elements were:      [["Alan Arkin"], ["Anthony Perkins"], ["Bill Paxton"], ["Bob Balaban"], ["Bob Newhart"], ["Buck Henry"], ["Jack Gilford"], ["Jon Voight"], ["Julian Sands"], ["Kurtwood Smith"], ["Martin Balsam"], ["Martin Sheen"], ["Norman Fell"], ["Orson Welles"], ["Richard Benjamin"], ["Sherilyn Fenn"]]
+     # ./spec/07_joins_exercises_spec.rb:124:in `block (3 levels) in <top (required)>'
+
+  22) music JOINs alison_artist selects the artist who recorded 'Alison'
+     Failure/Error: expect(alison_artist).to contain_exactly(
+       expected collection contained:  [["Elvis Costello"]]
+       actual collection contained:    []
+       the missing elements were:      [["Elvis Costello"]]
+     # ./spec/07a_joins_bonus_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  23) music JOINs exodus_artist selects the artist who recorded 'Exodus'
+     Failure/Error: expect(exodus_artist).to contain_exactly(
+       expected collection contained:  [["Bob Marley"]]
+       actual collection contained:    []
+       the missing elements were:      [["Bob Marley"]]
+     # ./spec/07a_joins_bonus_spec.rb:15:in `block (3 levels) in <top (required)>'
+
+  24) music JOINs blur_songs selects the songs on the album 'Blur'
+     Failure/Error: expect(blur_songs).to contain_exactly(
+       expected collection contained:  [["Beetlebum"], ["Chinese Bombs"], ["Country Sad Ballad Man"], ["Death Of A Party"], ["Essex Dogs"], ["I'm Just A Killer For Your Love"], ["Look Inside America"], ["M.O.R."], ["Movin' On"], ["On Your Own"], ["Song 2"], ["Strange News From Another Star"], ["Theme From Retro"], ["You're So Great"]]
+       actual collection contained:    []
+       the missing elements were:      [["Beetlebum"], ["Chinese Bombs"], ["Country Sad Ballad Man"], ["Death Of A Party"], ["Essex Dogs"], ["I'm Just A Killer For Your Love"], ["Look Inside America"], ["M.O.R."], ["Movin' On"], ["On Your Own"], ["Song 2"], ["Strange News From Another Star"], ["Theme From Retro"], ["You're So Great"]]
+     # ./spec/07a_joins_bonus_spec.rb:23:in `block (3 levels) in <top (required)>'
+
+  25) music JOINs heart_tracks selects albums with songs containing the word 'Heart'
+     Failure/Error: expect(heart_tracks).to eq([
+       
+       expected: [["Bing! His Legendary Years, 1931 to 1957 [BOX SET]", "5"], ["The Greatest Hits", "4"], ["Forty Years-Artistry of Tony B", "3"], ["50 Worldwide Gold HitsVolume 1, Parts 1 & 2", "2"], ["Baby One More Time [ENHANCED CD]", "2"], ["BasherThe Best of Nick Lowe", "2"], ["San Francisco Days", "2"], ["Sgt. Pepper's Lonely Hearts Club Band", "2"], ["The Dionne Warwick CollectionHer All-Time Greatest", "2"], ["The Mel TormCollection [BOX SET]", "2"], ["Believe", "1"], ["Best Of", "1"], ["Blood on the Tracks", "1"], ["Eurythmics - Greatest Hits", "1"], ["Greatest HitsKing of Cool", "1"], ["Handel - Messiah / Nelson Kirkby Watkinson", "1"], ["I Left My Heart in San Francisco", "1"], ["Judy at Carnegie Hall [LIVE]", "1"], ["Les MiserablesOriginal London Cast Recording [CAST", "1"], ["Let's Talk About Love [ENHANCED CD]", "1"], ["Millennium", "1"], ["N Sync", "1"], ["Parallel Lines", "1"], ["Sevens", "1"], ["Singles 45's and Under", "1"], ["The Best...So Far", "1"], ["The Capitol Years", "1"], ["The Immaculate Collection", "1"], ["TitanicMusic from the Motion Picture (1997) [SOUND", "1"], ["Top Ten Hits", "1"], ["Wide Open Spaces", "1"], ["Yellow Submarine [ORIGINAL RECORDING REMASTERED]", "1"]]
+            got: []
+       
+       (compared using ==)
+     # ./spec/07a_joins_bonus_spec.rb:44:in `block (3 levels) in <top (required)>'
+
+  26) music JOINs title_tracks selects the names of all title tracks
+     Failure/Error: expect(title_tracks).to contain_exactly(
+       expected collection contained:  [["Are You Experienced?"], ["Believe"], ["Born in the U.S.A."], ["Born to Run"], ["Buena Vista Social Club"], ["Butterfly"], ["Come on Over"], ["Faith"], ["Falling into You"], ["Fumbling Towards Ecstasy"], ["Graceland"], ["Highway 61 Revisited"], ["Hotel California"], ["I Left My Heart in San Francisco"], ["In It for the Money"], ["Little Earthquakes"], ["London Calling"], ["Mack the Knife"], ["Master of Puppets"], ["Mellon Collie and the Infinite Sadness"], ["Moondance"], ["Ray of Light"], ["Sail Away"], ["San Francisco Days"], ["Sgt. Pepper's Lonely Hearts Club Band"], ["The Miseducation Of Lauryn Hill"], ["Thriller"], ["Watermark"], ["Wide Open Spaces"]]
+       actual collection contained:    []
+       the missing elements were:      [["Are You Experienced?"], ["Believe"], ["Born in the U.S.A."], ["Born to Run"], ["Buena Vista Social Club"], ["Butterfly"], ["Come on Over"], ["Faith"], ["Falling into You"], ["Fumbling Towards Ecstasy"], ["Graceland"], ["Highway 61 Revisited"], ["Hotel California"], ["I Left My Heart in San Francisco"], ["In It for the Money"], ["Little Earthquakes"], ["London Calling"], ["Mack the Knife"], ["Master of Puppets"], ["Mellon Collie and the Infinite Sadness"], ["Moondance"], ["Ray of Light"], ["Sail Away"], ["San Francisco Days"], ["Sgt. Pepper's Lonely Hearts Club Band"], ["The Miseducation Of Lauryn Hill"], ["Thriller"], ["Watermark"], ["Wide Open Spaces"]]
+     # ./spec/07a_joins_bonus_spec.rb:83:in `block (3 levels) in <top (required)>'
+
+  27) music JOINs eponymous_albums selects the names of all eponymous albums
+     Failure/Error: expect(eponymous_albums).to contain_exactly(
+       expected collection contained:  [["Blur"], ["Metallica"], ["The Doors"], ["Toni Braxton"]]
+       actual collection contained:    []
+       the missing elements were:      [["Blur"], ["Metallica"], ["The Doors"], ["Toni Braxton"]]
+     # ./spec/07a_joins_bonus_spec.rb:119:in `block (3 levels) in <top (required)>'
+
+  28) music JOINs song_title_counts selects the names and counts of songs that appear on more than two albums
+     Failure/Error: expect(song_title_counts).to contain_exactly(
+       expected collection contained:  [["Angel", "3"], ["Best Is Yet to Come", "3"], ["Dancing in the Dark", "3"], ["From This Moment On", "4"], ["I Love You", "4"], ["I've Got You Under My Skin", "3"], ["One", "3"], ["Smile", "5"], ["Too Much", "3"]]
+       actual collection contained:    []
+       the missing elements were:      [["Angel", "3"], ["Best Is Yet to Come", "3"], ["Dancing in the Dark", "3"], ["From This Moment On", "4"], ["I Love You", "4"], ["I've Got You Under My Skin", "3"], ["One", "3"], ["Smile", "5"], ["Too Much", "3"]]
+     # ./spec/07a_joins_bonus_spec.rb:130:in `block (3 levels) in <top (required)>'
+
+  29) music JOINs best_value selects the title, price, and track count of high-value albums
+     Failure/Error: expect(best_value).to contain_exactly(
+       expected collection contained:  [["BasherThe Best of Nick Lowe", "11.98", "25"], ["Darlings of Wapping Wharf Launderette", "14.99", "50"], ["First Issue-Dinah Washington S", "22.98", "46"], ["Forty Years-Artistry of Tony B", "35.99", "87"], ["The Capitol Years", "34.99", "75"], ["The Greatest Hits", "22.99", "54"], ["Under the Table & Dreaming", "13.49", "34"]]
+       actual collection contained:    []
+       the missing elements were:      [["BasherThe Best of Nick Lowe", "11.98", "25"], ["Darlings of Wapping Wharf Launderette", "14.99", "50"], ["First Issue-Dinah Washington S", "22.98", "46"], ["Forty Years-Artistry of Tony B", "35.99", "87"], ["The Capitol Years", "34.99", "75"], ["The Greatest Hits", "22.99", "54"], ["Under the Table & Dreaming", "13.49", "34"]]
+     # ./spec/07a_joins_bonus_spec.rb:146:in `block (3 levels) in <top (required)>'
+
+  30) music JOINs top_track_counts selects the titles and track counts of large albums
+     Failure/Error: expect(top_track_counts).to eq([
+       
+       expected: [["Wagner - Der Ring des Nibelungen (Ring Cycle) / Si", "173"], ["Bing! His Legendary Years, 1931 to 1957 [BOX SET]", "101"], ["The Mel TormCollection [BOX SET]", "92"], ["Forty Years-Artistry of Tony B", "87"], ["The Capitol Years", "75"], ["The Greatest Hits", "54"], ["The Beatles (The White Album)", "53"], ["Darlings of Wapping Wharf Launderette", "50"], ["50 by Bobby Short", "50"], ["First Issue-Dinah Washington S", "46"]]
+            got: []
+       
+       (compared using ==)
+     # ./spec/07a_joins_bonus_spec.rb:160:in `block (3 levels) in <top (required)>'
+
+  31) music JOINs rock_superstars selects the name of the most prolific rock artist
+     Failure/Error: expect(rock_superstars).to contain_exactly(
+       expected collection contained:  [["The Beatles", "7"]]
+       actual collection contained:    []
+       the missing elements were:      [["The Beatles", "7"]]
+     # ./spec/07a_joins_bonus_spec.rb:177:in `block (3 levels) in <top (required)>'
+
+  32) music JOINs expensive_tastes selects the five genres that cost the most per track
+     Failure/Error: expect(expensive_tastes).to eq([
+       
+       expected: [["Styles > Classical > Forms & Genres > Theatrical, Incidental & Program Music > Incidental Music", "2.3557142857142857"], ["Styles > Classical > Historical Periods > Romantic (c.1820-1910) > Ballets & Dances", "2.3557142857142857"], ["Styles > Classical > Historical Periods > Romantic (c.1820-1910) > Forms & Genres > Theatrical, Inci", "2.3557142857142857"], ["Styles > Classical > Forms & Genres > Symphonies > Romantic", "1.8980000000000000"], ["Styles > Classical > Symphonies > General", "1.8980000000000000"]]
+            got: []
+       
+       (compared using ==)
+     # ./spec/07a_joins_bonus_spec.rb:185:in `block (3 levels) in <top (required)>'
+
+  33) using NULL null_dept selects teachers who have NULL as their department
+     Failure/Error: expect(null_dept).to contain_exactly(["Spiregrain"], ["Deadyawn"])
+       expected collection contained:  [["Deadyawn"], ["Spiregrain"]]
+       actual collection contained:    []
+       the missing elements were:      [["Deadyawn"], ["Spiregrain"]]
+     # ./spec/08_using_null_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  34) using NULL all_teachers_join displays all of the teachers in a joined table
+     Failure/Error: expect(all_teachers_join).to contain_exactly(
+       expected collection contained:  [["Cutflower", "Design"], ["Deadyawn", nil], ["Shrivell", "Computing"], ["Spiregrain", nil], ["Splint", "Computing"], ["Throd", "Computing"]]
+       actual collection contained:    []
+       the missing elements were:      [["Cutflower", "Design"], ["Deadyawn", nil], ["Shrivell", "Computing"], ["Spiregrain", nil], ["Splint", "Computing"], ["Throd", "Computing"]]
+     # ./spec/08_using_null_spec.rb:13:in `block (3 levels) in <top (required)>'
+
+  35) using NULL all_depts_join displays all of the departments in a joined table
+     Failure/Error: expect(all_depts_join).to contain_exactly(
+       expected collection contained:  [["Shrivell", "Computing"], ["Throd", "Computing"], ["Splint", "Computing"], ["Cutflower", "Design"], [nil, "Engineering"]]
+       actual collection contained:    []
+       the missing elements were:      [["Shrivell", "Computing"], ["Throd", "Computing"], ["Splint", "Computing"], ["Cutflower", "Design"], [nil, "Engineering"]]
+     # ./spec/08_using_null_spec.rb:26:in `block (3 levels) in <top (required)>'
+
+  36) using NULL teachers_and_mobiles displays teachers' mobile numbers, or a default if none exists
+     Failure/Error: expect(teachers_and_mobiles).to contain_exactly(
+       expected collection contained:  [["Cutflower", "07966 555 6574"], ["Deadyawn", "07986 444 2266"], ["Shrivell", "07966 555 1234"], ["Spiregrain", "07986 444 2266"], ["Splint", "07986 444 2266"], ["Throd", "07122 555 1920"]]
+       actual collection contained:    []
+       the missing elements were:      [["Cutflower", "07966 555 6574"], ["Deadyawn", "07986 444 2266"], ["Shrivell", "07966 555 1234"], ["Spiregrain", "07986 444 2266"], ["Splint", "07986 444 2266"], ["Throd", "07122 555 1920"]]
+     # ./spec/08_using_null_spec.rb:38:in `block (3 levels) in <top (required)>'
+
+  37) using NULL teachers_and_depts displays teachers and their departments, or 'None' if they have none
+     Failure/Error: expect(teachers_and_depts).to contain_exactly(
+       expected collection contained:  [["Cutflower", "Design"], ["Deadyawn", "None"], ["Shrivell", "Computing"], ["Spiregrain", "None"], ["Splint", "Computing"], ["Throd", "Computing"]]
+       actual collection contained:    []
+       the missing elements were:      [["Cutflower", "Design"], ["Deadyawn", "None"], ["Shrivell", "Computing"], ["Spiregrain", "None"], ["Splint", "Computing"], ["Throd", "Computing"]]
+     # ./spec/08_using_null_spec.rb:51:in `block (3 levels) in <top (required)>'
+
+  38) using NULL num_teachers_and_mobiles shows the number of teachers and the number of mobile numbers
+     Failure/Error: expect(num_teachers_and_mobiles).to contain_exactly(["6", "3"])
+       expected collection contained:  [["6", "3"]]
+       actual collection contained:    []
+       the missing elements were:      [["6", "3"]]
+     # ./spec/08_using_null_spec.rb:64:in `block (3 levels) in <top (required)>'
+
+  39) using NULL dept_staff_counts shows the name and number of staff of each department
+     Failure/Error: expect(dept_staff_counts).to contain_exactly(
+       expected collection contained:  [["Computing", "3"], ["Design", "1"], ["Engineering", "0"]]
+       actual collection contained:    []
+       the missing elements were:      [["Computing", "3"], ["Design", "1"], ["Engineering", "0"]]
+     # ./spec/08_using_null_spec.rb:70:in `block (3 levels) in <top (required)>'
+
+  40) using NULL teachers_and_divisions shows the name and division of teachers
+     Failure/Error: expect(teachers_and_divisions).to contain_exactly(
+       expected collection contained:  [["Cutflower", "Sci"], ["Deadyawn", "Art"], ["Shrivell", "Sci"], ["Spiregrain", "Art"], ["Splint", "Sci"], ["Throd", "Sci"]]
+       actual collection contained:    []
+       the missing elements were:      [["Cutflower", "Sci"], ["Deadyawn", "Art"], ["Shrivell", "Sci"], ["Spiregrain", "Art"], ["Splint", "Sci"], ["Throd", "Sci"]]
+     # ./spec/08_using_null_spec.rb:80:in `block (3 levels) in <top (required)>'
+
+  41) using NULL teachers_and_divisions_two shows the name and division of teachers, or 'None' if they have none
+     Failure/Error: expect(teachers_and_divisions_two).to contain_exactly(
+       expected collection contained:  [["Cutflower", "Sci"], ["Deadyawn", "None"], ["Shrivell", "Sci"], ["Spiregrain", "None"], ["Splint", "Sci"], ["Throd", "Sci"]]
+       actual collection contained:    []
+       the missing elements were:      [["Cutflower", "Sci"], ["Deadyawn", "None"], ["Shrivell", "Sci"], ["Spiregrain", "None"], ["Splint", "Sci"], ["Throd", "Sci"]]
+     # ./spec/08_using_null_spec.rb:93:in `block (3 levels) in <top (required)>'
+
+  42) self-JOIN exercises num_stops shows the number of stops in the table
+     Failure/Error: expect(num_stops).to contain_exactly(["246"])
+       expected collection contained:  [["246"]]
+       actual collection contained:    []
+       the missing elements were:      [["246"]]
+     # ./spec/09_self_joins_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  43) self-JOIN exercises craiglockhart_id shows the ID of the stop Craiglockhart
+     Failure/Error: expect(craiglockhart_id).to contain_exactly(["53"])
+       expected collection contained:  [["53"]]
+       actual collection contained:    []
+       the missing elements were:      [["53"]]
+     # ./spec/09_self_joins_spec.rb:13:in `block (3 levels) in <top (required)>'
+
+  44) self-JOIN exercises lrt_stops shows the ids and names of stops on the 4 LRT service
+     Failure/Error: expect(lrt_stops).to contain_exactly(
+       expected collection contained:  [["115", "Haymarket"], ["117", "Hillend"], ["149", "London Road"], ["177", "Northfield"], ["179", "Oxgangs"], ["19", "Bingham"], ["194", "Princes Street"], ["53", "Craiglockhart"], ["85", "Fairmilehead"]]
+       actual collection contained:    []
+       the missing elements were:      [["115", "Haymarket"], ["117", "Hillend"], ["149", "London Road"], ["177", "Northfield"], ["179", "Oxgangs"], ["19", "Bingham"], ["194", "Princes Street"], ["53", "Craiglockhart"], ["85", "Fairmilehead"]]
+     # ./spec/09_self_joins_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+  45) self-JOIN exercises connecting_routes shows the routes that connect London Road with Craiglockhart
+     Failure/Error: expect(connecting_routes).to contain_exactly(
+       expected collection contained:  [["LRT", "4", "2"], ["LRT", "45", "2"]]
+       actual collection contained:    []
+       the missing elements were:      [["LRT", "4", "2"], ["LRT", "45", "2"]]
+     # ./spec/09_self_joins_spec.rb:35:in `block (3 levels) in <top (required)>'
+
+  46) self-JOIN exercises cl_to_lr shows routes from Craiglockhart to London Road
+     Failure/Error: expect(cl_to_lr).to contain_exactly(
+       expected collection contained:  [["LRT", "4", "53", "149"], ["LRT", "45", "53", "149"]]
+       actual collection contained:    []
+       the missing elements were:      [["LRT", "4", "53", "149"], ["LRT", "45", "53", "149"]]
+     # ./spec/09_self_joins_spec.rb:44:in `block (3 levels) in <top (required)>'
+
+  47) self-JOIN exercises cl_to_lr_by_name shows routes from Craiglockhart to London Road
+     Failure/Error: expect(cl_to_lr_by_name).to contain_exactly(
+       expected collection contained:  [["LRT", "4", "Craiglockhart", "London Road"], ["LRT", "45", "Craiglockhart", "London Road"]]
+       actual collection contained:    []
+       the missing elements were:      [["LRT", "4", "Craiglockhart", "London Road"], ["LRT", "45", "Craiglockhart", "London Road"]]
+     # ./spec/09_self_joins_spec.rb:53:in `block (3 levels) in <top (required)>'
+
+  48) self-JOIN exercises haymarket_and_leith shows services connecting Haymarket and Leith
+     Failure/Error: expect(haymarket_and_leith).to contain_exactly(
+       expected collection contained:  [["LRT", "12"], ["LRT", "2"], ["LRT", "22"], ["LRT", "25"], ["LRT", "2A"], ["SMT", "C5"]]
+       actual collection contained:    []
+       the missing elements were:      [["LRT", "12"], ["LRT", "2"], ["LRT", "22"], ["LRT", "25"], ["LRT", "2A"], ["SMT", "C5"]]
+     # ./spec/09_self_joins_spec.rb:62:in `block (3 levels) in <top (required)>'
+
+  49) self-JOIN exercises craiglockhart_and_tollcross shows services connecting Craiglockhart and Tollcross
+     Failure/Error: expect(craiglockhart_and_tollcross).to contain_exactly(
+       expected collection contained:  [["LRT", "10"], ["LRT", "27"], ["LRT", "45"], ["LRT", "47"]]
+       actual collection contained:    []
+       the missing elements were:      [["LRT", "10"], ["LRT", "27"], ["LRT", "45"], ["LRT", "47"]]
+     # ./spec/09_self_joins_spec.rb:75:in `block (3 levels) in <top (required)>'
+
+  50) self-JOIN exercises start_at_craiglockhart shows stops that can be reached by taking one bus from Craiglockhart
+     Failure/Error: expect(start_at_craiglockhart).to contain_exactly(
+       expected collection contained:  [["Balerno", "LRT", "47"], ["Balerno Church", "LRT", "47"], ["Bingham", "LRT", "4"], ["Brunstane", "LRT", "45"], ["Canonmills", "LRT", "27"], ["Canonmills", "LRT", "47"], ["Cockburn Crescent", "LRT", "47"], ["Colinton", "LRT", "10"], ["Colinton", "LRT", "45"], ["Colinton", "LRT", "47"], ["Craiglockhart", "LRT", "10"], ["Craiglockhart", "LRT", "27"], ["Craiglockhart", "LRT", "4"], ["Craiglockhart", "LRT", "45"], ["Craiglockhart", "LRT", "47"], ["Crewe Toll", "LRT", "27"], ["Currie", "LRT", "45"], ["Currie", "LRT", "47"], ["Duddingston", "LRT", "45"], ["Fairmilehead", "LRT", "4"], ["Hanover Street", "LRT", "27"], ["Hanover Street", "LRT", "45"], ["Hanover Street", "LRT", "47"], ["Haymarket", "LRT", "4"], ["Hillend", "LRT", "4"], ["Hunters Tryst", "LRT", "27"], ["Leith", "LRT", "10"], ["Leith Walk", "LRT", "10"], ["London Road", "LRT", "4"], ["London Road", "LRT", "45"], ["Muirhouse", "LRT", "10"], ["Newhaven", "LRT", "10"], ["Northfield", "LRT", "4"], ["Northfield", "LRT", "45"], ["Oxgangs", "LRT", "27"], ["Oxgangs", "LRT", "4"], ["Princes Street", "LRT", "10"], ["Princes Street", "LRT", "4"], ["Riccarton Campus", "LRT", "45"], ["Silverknowes", "LRT", "10"], ["Silverknowes", "LRT", "27"], ["Tollcross", "LRT", "10"], ["Tollcross", "LRT", "27"], ["Tollcross", "LRT", "45"], ["Tollcross", "LRT", "47"], ["Torphin", "LRT", "10"]]
+       actual collection contained:    []
+       the missing elements were:      [["Balerno", "LRT", "47"], ["Balerno Church", "LRT", "47"], ["Bingham", "LRT", "4"], ["Brunstane", "LRT", "45"], ["Canonmills", "LRT", "27"], ["Canonmills", "LRT", "47"], ["Cockburn Crescent", "LRT", "47"], ["Colinton", "LRT", "10"], ["Colinton", "LRT", "45"], ["Colinton", "LRT", "47"], ["Craiglockhart", "LRT", "10"], ["Craiglockhart", "LRT", "27"], ["Craiglockhart", "LRT", "4"], ["Craiglockhart", "LRT", "45"], ["Craiglockhart", "LRT", "47"], ["Crewe Toll", "LRT", "27"], ["Currie", "LRT", "45"], ["Currie", "LRT", "47"], ["Duddingston", "LRT", "45"], ["Fairmilehead", "LRT", "4"], ["Hanover Street", "LRT", "27"], ["Hanover Street", "LRT", "45"], ["Hanover Street", "LRT", "47"], ["Haymarket", "LRT", "4"], ["Hillend", "LRT", "4"], ["Hunters Tryst", "LRT", "27"], ["Leith", "LRT", "10"], ["Leith Walk", "LRT", "10"], ["London Road", "LRT", "4"], ["London Road", "LRT", "45"], ["Muirhouse", "LRT", "10"], ["Newhaven", "LRT", "10"], ["Northfield", "LRT", "4"], ["Northfield", "LRT", "45"], ["Oxgangs", "LRT", "27"], ["Oxgangs", "LRT", "4"], ["Princes Street", "LRT", "10"], ["Princes Street", "LRT", "4"], ["Riccarton Campus", "LRT", "45"], ["Silverknowes", "LRT", "10"], ["Silverknowes", "LRT", "27"], ["Tollcross", "LRT", "10"], ["Tollcross", "LRT", "27"], ["Tollcross", "LRT", "45"], ["Tollcross", "LRT", "47"], ["Torphin", "LRT", "10"]]
+     # ./spec/09_self_joins_spec.rb:86:in `block (3 levels) in <top (required)>'
+
+  51) self-JOIN exercises craiglockhart_to_sighthill shows routes involving two buses from Craiglockhart to Sighthill
+     Failure/Error: expect(craiglockhart_to_sighthill).to contain_exactly(
+       expected collection contained:  [["10", "LRT", "Colinton", "32", "LRT"], ["10", "LRT", "Colinton", "52", "LRT"], ["10", "LRT", "Leith", "22", "LRT"], ["10", "LRT", "Leith", "25", "LRT"], ["10", "LRT", "Leith", "32", "LRT"], ["10", "LRT", "Leith", "34", "LRT"], ["10", "LRT", "Leith", "35", "LRT"], ["10", "LRT", "Leith", "52", "LRT"], ["10", "LRT", "Leith", "C5", "SMT"], ["10", "LRT", "Leith Walk", "22", "LRT"], ["10", "LRT", "Leith Walk", "22A", "LRT"], ["10", "LRT", "Leith Walk", "25", "LRT"], ["10", "LRT", "Muirhouse", "32", "LRT"], ["10", "LRT", "Muirhouse", "52", "LRT"], ["10", "LRT", "Newhaven", "22", "LRT"], ["10", "LRT", "Newhaven", "25", "LRT"], ["10", "LRT", "Newhaven", "32", "LRT"], ["10", "LRT", "Newhaven", "52", "LRT"], ["10", "LRT", "Princes Street", "3", "LRT"], ["10", "LRT", "Princes Street", "30", "LRT"], ["10", "LRT", "Princes Street", "3A", "LRJ"], ["10", "LRT", "Princes Street", "65", "LRT"], ["10", "LRT", "Princes Street", "C5", "SMT"], ["10", "LRT", "Princes Street", "C70", "SMT"], ["27", "LRT", "Canonmills", "34", "LRT"], ["27", "LRT", "Canonmills", "35", "LRT"], ["27", "LRT", "Oxgangs", "32", "LRT"], ["27", "LRT", "Oxgangs", "52", "LRT"], ["4", "LRT", "Fairmilehead", "32", "LRT"], ["4", "LRT", "Fairmilehead", "52", "LRT"], ["4", "LRT", "Haymarket", "22", "LRT"], ["4", "LRT", "Haymarket", "22A", "LRT"], ["4", "LRT", "Haymarket", "25", "LRT"], ["4", "LRT", "Haymarket", "3", "LRT"], ["4", "LRT", "Haymarket", "30", "LRT"], ["4", "LRT", "Haymarket", "3A", "LRJ"], ["4", "LRT", "Haymarket", "61", "LRT"], ["4", "LRT", "Haymarket", "61", "SMT"], ["4", "LRT", "Haymarket", "65", "LRT"], ["4", "LRT", "Haymarket", "C5", "SMT"], ["4", "LRT", "Haymarket", "C70", "SMT"], ["4", "LRT", "London Road", "34", "LRT"], ["4", "LRT", "London Road", "35", "LRT"], ["4", "LRT", "London Road", "65", "LRT"], ["4", "LRT", "London Road", "C5", "SMT"], ["4", "LRT", "Oxgangs", "32", "LRT"], ["4", "LRT", "Oxgangs", "52", "LRT"], ["4", "LRT", "Princes Street", "3", "LRT"], ["4", "LRT", "Princes Street", "30", "LRT"], ["4", "LRT", "Princes Street", "3A", "LRJ"], ["4", "LRT", "Princes Street", "65", "LRT"], ["4", "LRT", "Princes Street", "C5", "SMT"], ["4", "LRT", "Princes Street", "C70", "SMT"], ["45", "LRT", "Brunstane", "32", "LRT"], ["45", "LRT", "Brunstane", "52", "LRT"], ["45", "LRT", "Colinton", "32", "LRT"], ["45", "LRT", "Colinton", "52", "LRT"], ["45", "LRT", "Currie", "61", "LRT"], ["45", "LRT", "London Road", "34", "LRT"], ["45", "LRT", "London Road", "35", "LRT"], ["45", "LRT", "London Road", "65", "LRT"], ["45", "LRT", "London Road", "C5", "SMT"], ["45", "LRT", "Riccarton Campus", "22A", "LRT"], ["45", "LRT", "Riccarton Campus", "61", "SMT"], ["45", "LRT", "Riccarton Campus", "65", "LRT"], ["47", "LRT", "Canonmills", "34", "LRT"], ["47", "LRT", "Canonmills", "35", "LRT"], ["47", "LRT", "Colinton", "32", "LRT"], ["47", "LRT", "Colinton", "52", "LRT"], ["47", "LRT", "Currie", "61", "LRT"]]
+       actual collection contained:    []
+       the missing elements were:      [["10", "LRT", "Colinton", "32", "LRT"], ["10", "LRT", "Colinton", "52", "LRT"], ["10", "LRT", "Leith", "22", "LRT"], ["10", "LRT", "Leith", "25", "LRT"], ["10", "LRT", "Leith", "32", "LRT"], ["10", "LRT", "Leith", "34", "LRT"], ["10", "LRT", "Leith", "35", "LRT"], ["10", "LRT", "Leith", "52", "LRT"], ["10", "LRT", "Leith", "C5", "SMT"], ["10", "LRT", "Leith Walk", "22", "LRT"], ["10", "LRT", "Leith Walk", "22A", "LRT"], ["10", "LRT", "Leith Walk", "25", "LRT"], ["10", "LRT", "Muirhouse", "32", "LRT"], ["10", "LRT", "Muirhouse", "52", "LRT"], ["10", "LRT", "Newhaven", "22", "LRT"], ["10", "LRT", "Newhaven", "25", "LRT"], ["10", "LRT", "Newhaven", "32", "LRT"], ["10", "LRT", "Newhaven", "52", "LRT"], ["10", "LRT", "Princes Street", "3", "LRT"], ["10", "LRT", "Princes Street", "30", "LRT"], ["10", "LRT", "Princes Street", "3A", "LRJ"], ["10", "LRT", "Princes Street", "65", "LRT"], ["10", "LRT", "Princes Street", "C5", "SMT"], ["10", "LRT", "Princes Street", "C70", "SMT"], ["27", "LRT", "Canonmills", "34", "LRT"], ["27", "LRT", "Canonmills", "35", "LRT"], ["27", "LRT", "Oxgangs", "32", "LRT"], ["27", "LRT", "Oxgangs", "52", "LRT"], ["4", "LRT", "Fairmilehead", "32", "LRT"], ["4", "LRT", "Fairmilehead", "52", "LRT"], ["4", "LRT", "Haymarket", "22", "LRT"], ["4", "LRT", "Haymarket", "22A", "LRT"], ["4", "LRT", "Haymarket", "25", "LRT"], ["4", "LRT", "Haymarket", "3", "LRT"], ["4", "LRT", "Haymarket", "30", "LRT"], ["4", "LRT", "Haymarket", "3A", "LRJ"], ["4", "LRT", "Haymarket", "61", "LRT"], ["4", "LRT", "Haymarket", "61", "SMT"], ["4", "LRT", "Haymarket", "65", "LRT"], ["4", "LRT", "Haymarket", "C5", "SMT"], ["4", "LRT", "Haymarket", "C70", "SMT"], ["4", "LRT", "London Road", "34", "LRT"], ["4", "LRT", "London Road", "35", "LRT"], ["4", "LRT", "London Road", "65", "LRT"], ["4", "LRT", "London Road", "C5", "SMT"], ["4", "LRT", "Oxgangs", "32", "LRT"], ["4", "LRT", "Oxgangs", "52", "LRT"], ["4", "LRT", "Princes Street", "3", "LRT"], ["4", "LRT", "Princes Street", "30", "LRT"], ["4", "LRT", "Princes Street", "3A", "LRJ"], ["4", "LRT", "Princes Street", "65", "LRT"], ["4", "LRT", "Princes Street", "C5", "SMT"], ["4", "LRT", "Princes Street", "C70", "SMT"], ["45", "LRT", "Brunstane", "32", "LRT"], ["45", "LRT", "Brunstane", "52", "LRT"], ["45", "LRT", "Colinton", "32", "LRT"], ["45", "LRT", "Colinton", "52", "LRT"], ["45", "LRT", "Currie", "61", "LRT"], ["45", "LRT", "London Road", "34", "LRT"], ["45", "LRT", "London Road", "35", "LRT"], ["45", "LRT", "London Road", "65", "LRT"], ["45", "LRT", "London Road", "C5", "SMT"], ["45", "LRT", "Riccarton Campus", "22A", "LRT"], ["45", "LRT", "Riccarton Campus", "61", "SMT"], ["45", "LRT", "Riccarton Campus", "65", "LRT"], ["47", "LRT", "Canonmills", "34", "LRT"], ["47", "LRT", "Canonmills", "35", "LRT"], ["47", "LRT", "Colinton", "32", "LRT"], ["47", "LRT", "Colinton", "52", "LRT"], ["47", "LRT", "Currie", "61", "LRT"]]
+     # ./spec/09_self_joins_spec.rb:139:in `block (3 levels) in <top (required)>'
+
+Failures:
+
+  1) countries bonus largest_in_continent selects the countries with the largest areas in their continents
+     Failure/Error: expect(largest_in_continent).to contain_exactly(
+     PG::SyntaxError:
+       ERROR:  syntax error at or near "GROUP"
+       LINE 9:     GROUP BY
+                   ^
+     # ./lib/sqlzoo.rb:5:in `exec'
+     # ./lib/sqlzoo.rb:5:in `execute'
+     # ./lib/04a_countries_bonus.rb:39:in `largest_in_continent'
+     # ./spec/04a_countries_bonus_spec.rb:16:in `block (3 levels) in <top (required)>'
+
+  2) countries bonus large_neighbors selects countries with much higher populations than their neighbors
+     Failure/Error: expect(large_neighbors).to contain_exactly(
+       expected collection contained:  [["Brazil", "South America"], ["China", "Asia-Pacific"], ["India", "South Asia"]]
+       actual collection contained:    []
+       the missing elements were:      [["Brazil", "South America"], ["China", "Asia-Pacific"], ["India", "South Asia"]]
+     # ./spec/04a_countries_bonus_spec.rb:31:in `block (3 levels) in <top (required)>'
+
+  3) Aggregate queries country_counts shows the name and number of countries of each continent
+     Failure/Error: expect(country_counts).to contain_exactly(
+     PG::GroupingError:
+       ERROR:  column "countries.continent" must appear in the GROUP BY clause or be used in an aggregate function
+       LINE 2:       continent,
+                     ^
+     # ./lib/sqlzoo.rb:5:in `exec'
+     # ./lib/sqlzoo.rb:5:in `execute'
+     # ./lib/05_aggregates.rb:70:in `country_counts'
+     # ./spec/05_aggregates_spec.rb:46:in `block (3 levels) in <top (required)>'
+
+  4) Aggregate queries populous_country_counts shows the number of populous countries for each continent
+     Failure/Error: expect(populous_country_counts).to contain_exactly(
+     PG::GroupingError:
+       ERROR:  column "countries.continent" must appear in the GROUP BY clause or be used in an aggregate function
+       LINE 2:       continent,
+                     ^
+     # ./lib/sqlzoo.rb:5:in `exec'
+     # ./lib/sqlzoo.rb:5:in `execute'
+     # ./lib/05_aggregates.rb:82:in `populous_country_counts'
+     # ./spec/05_aggregates_spec.rb:61:in `block (3 levels) in <top (required)>'
+
+  5) Aggregate queries populous_continents shows the continents with total populations over 100 million
+     Failure/Error: expect(populous_continents).to contain_exactly(
+     PG::GroupingError:
+       ERROR:  aggregate functions are not allowed in WHERE
+       LINE 6:       COUNT(population) > 100000000
+                     ^
+     # ./lib/sqlzoo.rb:5:in `exec'
+     # ./lib/sqlzoo.rb:5:in `execute'
+     # ./lib/05_aggregates.rb:95:in `populous_continents'
+     # ./spec/05_aggregates_spec.rb:76:in `block (3 levels) in <top (required)>'
+
+  6) JOIN warmup films_from_sixty_two selects films from the year 1962
+     Failure/Error: expect(films_from_sixty_two).to contain_exactly(
+       expected collection contained:  [["1082", "Music Man, The"], ["121", "To Kill a Mockingbird"], ["1496", "What Ever Happened to Baby Jane?"], ["1751", "Cape Fear"], ["479", "Dr. No"]]
+       actual collection contained:    []
+       the missing elements were:      [["1082", "Music Man, The"], ["121", "To Kill a Mockingbird"], ["1496", "What Ever Happened to Baby Jane?"], ["1751", "Cape Fear"], ["479", "Dr. No"]]
+     # ./spec/06_joins_warmup_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  7) JOIN warmup year_of_kane selects the year that Citizen Kane was released
+     Failure/Error: expect(year_of_kane).to contain_exactly(["1941"])
+       expected collection contained:  [["1941"]]
+       actual collection contained:    []
+       the missing elements were:      [["1941"]]
+     # ./spec/06_joins_warmup_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+  8) JOIN warmup trek_films selects all Star Trek films and orders them by year
+     Failure/Error: expect(trek_films).to eq([
+       
+       expected: [["402", "Star Trek: The Motion Picture", "1979"], ["209", "Star Trek: The Wrath of Khan", "1982"], ["438", "Star Trek III: The Search for Spock", "1984"], ["349", "Star Trek IV: The Voyage Home", "1986"], ["472", "Star Trek V: The Final Frontier", "1989"], ["410", "Star Trek VI: The Undiscovered Country", "1991"], ["280", "Star Trek: Generations", "1994"], ["68", "Star Trek: First Contact", "1996"], ["252", "Star Trek: Insurrection", "1998"]]
+            got: []
+       
+       (compared using ==)
+     # ./spec/06_joins_warmup_spec.rb:25:in `block (3 levels) in <top (required)>'
+
+  9) JOIN warmup films_by_id selects the names of the films with the given IDs
+     Failure/Error: expect(films_by_id).to contain_exactly(
+       expected collection contained:  [["Big Momma's House"], ["Power of One, The"], ["To Be or Not to Be"]]
+       actual collection contained:    []
+       the missing elements were:      [["Big Momma's House"], ["Power of One, The"], ["To Be or Not to Be"]]
+     # ./spec/06_joins_warmup_spec.rb:41:in `block (3 levels) in <top (required)>'
+
+  10) JOIN warmup glenn_close_id selects the ID of actress Glenn Close
+     Failure/Error: expect(glenn_close_id).to contain_exactly(["104"])
+       expected collection contained:  [["104"]]
+       actual collection contained:    []
+       the missing elements were:      [["104"]]
+     # ./spec/06_joins_warmup_spec.rb:51:in `block (3 levels) in <top (required)>'
+
+  11) JOIN warmup casablanca_id selects the ID of the film Casablanca
+     Failure/Error: expect(casablanca_id).to contain_exactly(["27"])
+       expected collection contained:  [["27"]]
+       actual collection contained:    []
+       the missing elements were:      [["27"]]
+     # ./spec/06_joins_warmup_spec.rb:57:in `block (3 levels) in <top (required)>'
+
+  12) JOIN warmup casablanca_cast selects the cast of the film Casablanca
+     Failure/Error: expect(casablanca_cast).to contain_exactly(
+       expected collection contained:  [["Claude Rains"], ["Conrad Veidt"], ["Curt Bois"], ["Humphrey Bogart"], ["Ingrid Bergman"], ["John Qualen"], ["Madeleine LeBeau"], ["Paul Henreid"], ["Peter Lorre"]]
+       actual collection contained:    []
+       the missing elements were:      [["Claude Rains"], ["Conrad Veidt"], ["Curt Bois"], ["Humphrey Bogart"], ["Ingrid Bergman"], ["John Qualen"], ["Madeleine LeBeau"], ["Paul Henreid"], ["Peter Lorre"]]
+     # ./spec/06_joins_warmup_spec.rb:63:in `block (3 levels) in <top (required)>'
+
+  13) JOIN warmup alien_cast selects the cast of the film Alien
+     Failure/Error: expect(alien_cast).to contain_exactly(
+       expected collection contained:  [["Harry Dean Stanton"], ["Ian Holm"], ["John Hurt"], ["Sigourney Weaver"], ["Tom Skerritt"], ["Veronica Cartwright"], ["Yaphet Kotto"]]
+       actual collection contained:    []
+       the missing elements were:      [["Harry Dean Stanton"], ["Ian Holm"], ["John Hurt"], ["Sigourney Weaver"], ["Tom Skerritt"], ["Veronica Cartwright"], ["Yaphet Kotto"]]
+     # ./spec/06_joins_warmup_spec.rb:79:in `block (3 levels) in <top (required)>'
+
+  14) JOIN exercises ford_films selects films in which actor Harrison Ford played
+     Failure/Error: expect(ford_films).to contain_exactly(
+       expected collection contained:  [["Air Force One"], ["American Graffiti"], ["Apocalypse Now"], ["Blade Runner"], ["Clear and Present Danger"], ["Conversation, The"], ["Devil's Own, The"], ["Frantic"], ["Fugitive, The"], ["Indiana Jones and the Last Crusade"], ["Indiana Jones and the Temple of Doom"], ["Mosquito Coast, The"], ["Patriot Games"], ["Presumed Innocent"], ["Raiders of the Lost Ark"], ["Random Hearts"], ["Regarding Henry"], ["Sabrina"], ["Six Days Seven Nights"], ["Star Wars"], ["Star Wars: Episode V - The Empire Strikes Back"], ["Star Wars: Episode VI - Return of the Jedi"], ["What Lies Beneath"], ["Witness"], ["Working Girl"]]
+       actual collection contained:    []
+       the missing elements were:      [["Air Force One"], ["American Graffiti"], ["Apocalypse Now"], ["Blade Runner"], ["Clear and Present Danger"], ["Conversation, The"], ["Devil's Own, The"], ["Frantic"], ["Fugitive, The"], ["Indiana Jones and the Last Crusade"], ["Indiana Jones and the Temple of Doom"], ["Mosquito Coast, The"], ["Patriot Games"], ["Presumed Innocent"], ["Raiders of the Lost Ark"], ["Random Hearts"], ["Regarding Henry"], ["Sabrina"], ["Six Days Seven Nights"], ["Star Wars"], ["Star Wars: Episode V - The Empire Strikes Back"], ["Star Wars: Episode VI - Return of the Jedi"], ["What Lies Beneath"], ["Witness"], ["Working Girl"]]
+     # ./spec/07_joins_exercises_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  15) JOIN exercises ford_supporting_films selects films in which Harrison Ford played but did not lead
+     Failure/Error: expect(ford_supporting_films).to contain_exactly(
+       expected collection contained:  [["American Graffiti"], ["Apocalypse Now"], ["Conversation, The"], ["Star Wars"], ["Star Wars: Episode V - The Empire Strikes Back"], ["Star Wars: Episode VI - Return of the Jedi"]]
+       actual collection contained:    []
+       the missing elements were:      [["American Graffiti"], ["Apocalypse Now"], ["Conversation, The"], ["Star Wars"], ["Star Wars: Episode V - The Empire Strikes Back"], ["Star Wars: Episode VI - Return of the Jedi"]]
+     # ./spec/07_joins_exercises_spec.rb:39:in `block (3 levels) in <top (required)>'
+
+  16) JOIN exercises films_and_stars_from_sixty_two lists the titles and stars of all 1962 films
+     Failure/Error: expect(films_and_stars_from_sixty_two).to contain_exactly(
+       expected collection contained:  [["Cape Fear", "Gregory Peck"], ["Dr. No", "Sean Connery"], ["Music Man, The", "Robert Preston (I)"], ["To Kill a Mockingbird", "Gregory Peck"], ["What Ever Happened to Baby Jane?", "Bette Davis"]]
+       actual collection contained:    []
+       the missing elements were:      [["Cape Fear", "Gregory Peck"], ["Dr. No", "Sean Connery"], ["Music Man, The", "Robert Preston (I)"], ["To Kill a Mockingbird", "Gregory Peck"], ["What Ever Happened to Baby Jane?", "Bette Davis"]]
+     # ./spec/07_joins_exercises_spec.rb:52:in `block (3 levels) in <top (required)>'
+
+  17) JOIN exercises travoltas_busiest_years selects the year and number of movies of John Travolta's busy years
+     Failure/Error: expect(travoltas_busiest_years).to contain_exactly(
+       expected collection contained:  [["1996", "2"], ["1998", "2"]]
+       actual collection contained:    []
+       the missing elements were:      [["1996", "2"], ["1998", "2"]]
+     # ./spec/07_joins_exercises_spec.rb:64:in `block (3 levels) in <top (required)>'
+
+  18) JOIN exercises andrews_films_and_leads selects the titles and lead actors of films Julie Andrews played in
+     Failure/Error: expect(andrews_films_and_leads).to contain_exactly(
+       expected collection contained:  [["10", "Dudley Moore"], ["Sound of Music, The", "Julie Andrews"], ["Victor/Victoria", "Julie Andrews"]]
+       actual collection contained:    []
+       the missing elements were:      [["10", "Dudley Moore"], ["Sound of Music, The", "Julie Andrews"], ["Victor/Victoria", "Julie Andrews"]]
+     # ./spec/07_joins_exercises_spec.rb:73:in `block (3 levels) in <top (required)>'
+
+  19) JOIN exercises prolific_actors selects and orders the actors who have had at least 15 starring roles
+     Failure/Error: expect(prolific_actors).to eq([
+       
+       expected: [["Al Pacino"], ["Arnold Schwarzenegger"], ["Clint Eastwood"], ["Harrison Ford"], ["Robert De Niro"], ["Robin Williams"], ["Sean Connery"], ["Sylvester Stallone"], ["Tom Hanks"]]
+            got: []
+       
+       (compared using ==)
+     # ./spec/07_joins_exercises_spec.rb:83:in `block (3 levels) in <top (required)>'
+
+  20) JOIN exercises films_by_cast_size selects 1978 films and orders by cast size
+     Failure/Error: expect(films_by_cast_size).to eq([
+       
+       expected: [["Death on the Nile", "12"], ["Capricorn One", "11"], ["Foul Play", "11"], ["Heaven Can Wait", "11"], ["Animal House", "9"], ["Boys from Brazil, The", "9"], ["Midnight Express", "9"], ["Superman", "9"], ["Watership Down", "9"], ["Deer Hunter, The", "8"], ["Grease", "8"], ["Halloween", "8"], ["Attack of the Killer Tomatoes!", "7"], ["Coma", "7"], ["Damien: Omen II", "7"], ["Days of Heaven", "6"], ["Up in Smoke", "6"], ["Dawn of the Dead", "5"]]
+            got: []
+       
+       (compared using ==)
+     # ./spec/07_joins_exercises_spec.rb:99:in `block (3 levels) in <top (required)>'
+
+  21) JOIN exercises colleagues_of_garfunkel selects actors who have worked with Art Garfunkel
+     Failure/Error: expect(colleagues_of_garfunkel).to contain_exactly(
+       expected collection contained:  [["Alan Arkin"], ["Anthony Perkins"], ["Bill Paxton"], ["Bob Balaban"], ["Bob Newhart"], ["Buck Henry"], ["Jack Gilford"], ["Jon Voight"], ["Julian Sands"], ["Kurtwood Smith"], ["Martin Balsam"], ["Martin Sheen"], ["Norman Fell"], ["Orson Welles"], ["Richard Benjamin"], ["Sherilyn Fenn"]]
+       actual collection contained:    []
+       the missing elements were:      [["Alan Arkin"], ["Anthony Perkins"], ["Bill Paxton"], ["Bob Balaban"], ["Bob Newhart"], ["Buck Henry"], ["Jack Gilford"], ["Jon Voight"], ["Julian Sands"], ["Kurtwood Smith"], ["Martin Balsam"], ["Martin Sheen"], ["Norman Fell"], ["Orson Welles"], ["Richard Benjamin"], ["Sherilyn Fenn"]]
+     # ./spec/07_joins_exercises_spec.rb:124:in `block (3 levels) in <top (required)>'
+
+  22) music JOINs alison_artist selects the artist who recorded 'Alison'
+     Failure/Error: expect(alison_artist).to contain_exactly(
+       expected collection contained:  [["Elvis Costello"]]
+       actual collection contained:    []
+       the missing elements were:      [["Elvis Costello"]]
+     # ./spec/07a_joins_bonus_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  23) music JOINs exodus_artist selects the artist who recorded 'Exodus'
+     Failure/Error: expect(exodus_artist).to contain_exactly(
+       expected collection contained:  [["Bob Marley"]]
+       actual collection contained:    []
+       the missing elements were:      [["Bob Marley"]]
+     # ./spec/07a_joins_bonus_spec.rb:15:in `block (3 levels) in <top (required)>'
+
+  24) music JOINs blur_songs selects the songs on the album 'Blur'
+     Failure/Error: expect(blur_songs).to contain_exactly(
+       expected collection contained:  [["Beetlebum"], ["Chinese Bombs"], ["Country Sad Ballad Man"], ["Death Of A Party"], ["Essex Dogs"], ["I'm Just A Killer For Your Love"], ["Look Inside America"], ["M.O.R."], ["Movin' On"], ["On Your Own"], ["Song 2"], ["Strange News From Another Star"], ["Theme From Retro"], ["You're So Great"]]
+       actual collection contained:    []
+       the missing elements were:      [["Beetlebum"], ["Chinese Bombs"], ["Country Sad Ballad Man"], ["Death Of A Party"], ["Essex Dogs"], ["I'm Just A Killer For Your Love"], ["Look Inside America"], ["M.O.R."], ["Movin' On"], ["On Your Own"], ["Song 2"], ["Strange News From Another Star"], ["Theme From Retro"], ["You're So Great"]]
+     # ./spec/07a_joins_bonus_spec.rb:23:in `block (3 levels) in <top (required)>'
+
+  25) music JOINs heart_tracks selects albums with songs containing the word 'Heart'
+     Failure/Error: expect(heart_tracks).to eq([
+       
+       expected: [["Bing! His Legendary Years, 1931 to 1957 [BOX SET]", "5"], ["The Greatest Hits", "4"], ["Forty Years-Artistry of Tony B", "3"], ["50 Worldwide Gold HitsVolume 1, Parts 1 & 2", "2"], ["Baby One More Time [ENHANCED CD]", "2"], ["BasherThe Best of Nick Lowe", "2"], ["San Francisco Days", "2"], ["Sgt. Pepper's Lonely Hearts Club Band", "2"], ["The Dionne Warwick CollectionHer All-Time Greatest", "2"], ["The Mel TormCollection [BOX SET]", "2"], ["Believe", "1"], ["Best Of", "1"], ["Blood on the Tracks", "1"], ["Eurythmics - Greatest Hits", "1"], ["Greatest HitsKing of Cool", "1"], ["Handel - Messiah / Nelson Kirkby Watkinson", "1"], ["I Left My Heart in San Francisco", "1"], ["Judy at Carnegie Hall [LIVE]", "1"], ["Les MiserablesOriginal London Cast Recording [CAST", "1"], ["Let's Talk About Love [ENHANCED CD]", "1"], ["Millennium", "1"], ["N Sync", "1"], ["Parallel Lines", "1"], ["Sevens", "1"], ["Singles 45's and Under", "1"], ["The Best...So Far", "1"], ["The Capitol Years", "1"], ["The Immaculate Collection", "1"], ["TitanicMusic from the Motion Picture (1997) [SOUND", "1"], ["Top Ten Hits", "1"], ["Wide Open Spaces", "1"], ["Yellow Submarine [ORIGINAL RECORDING REMASTERED]", "1"]]
+            got: []
+       
+       (compared using ==)
+     # ./spec/07a_joins_bonus_spec.rb:44:in `block (3 levels) in <top (required)>'
+
+  26) music JOINs title_tracks selects the names of all title tracks
+     Failure/Error: expect(title_tracks).to contain_exactly(
+       expected collection contained:  [["Are You Experienced?"], ["Believe"], ["Born in the U.S.A."], ["Born to Run"], ["Buena Vista Social Club"], ["Butterfly"], ["Come on Over"], ["Faith"], ["Falling into You"], ["Fumbling Towards Ecstasy"], ["Graceland"], ["Highway 61 Revisited"], ["Hotel California"], ["I Left My Heart in San Francisco"], ["In It for the Money"], ["Little Earthquakes"], ["London Calling"], ["Mack the Knife"], ["Master of Puppets"], ["Mellon Collie and the Infinite Sadness"], ["Moondance"], ["Ray of Light"], ["Sail Away"], ["San Francisco Days"], ["Sgt. Pepper's Lonely Hearts Club Band"], ["The Miseducation Of Lauryn Hill"], ["Thriller"], ["Watermark"], ["Wide Open Spaces"]]
+       actual collection contained:    []
+       the missing elements were:      [["Are You Experienced?"], ["Believe"], ["Born in the U.S.A."], ["Born to Run"], ["Buena Vista Social Club"], ["Butterfly"], ["Come on Over"], ["Faith"], ["Falling into You"], ["Fumbling Towards Ecstasy"], ["Graceland"], ["Highway 61 Revisited"], ["Hotel California"], ["I Left My Heart in San Francisco"], ["In It for the Money"], ["Little Earthquakes"], ["London Calling"], ["Mack the Knife"], ["Master of Puppets"], ["Mellon Collie and the Infinite Sadness"], ["Moondance"], ["Ray of Light"], ["Sail Away"], ["San Francisco Days"], ["Sgt. Pepper's Lonely Hearts Club Band"], ["The Miseducation Of Lauryn Hill"], ["Thriller"], ["Watermark"], ["Wide Open Spaces"]]
+     # ./spec/07a_joins_bonus_spec.rb:83:in `block (3 levels) in <top (required)>'
+
+  27) music JOINs eponymous_albums selects the names of all eponymous albums
+     Failure/Error: expect(eponymous_albums).to contain_exactly(
+       expected collection contained:  [["Blur"], ["Metallica"], ["The Doors"], ["Toni Braxton"]]
+       actual collection contained:    []
+       the missing elements were:      [["Blur"], ["Metallica"], ["The Doors"], ["Toni Braxton"]]
+     # ./spec/07a_joins_bonus_spec.rb:119:in `block (3 levels) in <top (required)>'
+
+  28) music JOINs song_title_counts selects the names and counts of songs that appear on more than two albums
+     Failure/Error: expect(song_title_counts).to contain_exactly(
+       expected collection contained:  [["Angel", "3"], ["Best Is Yet to Come", "3"], ["Dancing in the Dark", "3"], ["From This Moment On", "4"], ["I Love You", "4"], ["I've Got You Under My Skin", "3"], ["One", "3"], ["Smile", "5"], ["Too Much", "3"]]
+       actual collection contained:    []
+       the missing elements were:      [["Angel", "3"], ["Best Is Yet to Come", "3"], ["Dancing in the Dark", "3"], ["From This Moment On", "4"], ["I Love You", "4"], ["I've Got You Under My Skin", "3"], ["One", "3"], ["Smile", "5"], ["Too Much", "3"]]
+     # ./spec/07a_joins_bonus_spec.rb:130:in `block (3 levels) in <top (required)>'
+
+  29) music JOINs best_value selects the title, price, and track count of high-value albums
+     Failure/Error: expect(best_value).to contain_exactly(
+       expected collection contained:  [["BasherThe Best of Nick Lowe", "11.98", "25"], ["Darlings of Wapping Wharf Launderette", "14.99", "50"], ["First Issue-Dinah Washington S", "22.98", "46"], ["Forty Years-Artistry of Tony B", "35.99", "87"], ["The Capitol Years", "34.99", "75"], ["The Greatest Hits", "22.99", "54"], ["Under the Table & Dreaming", "13.49", "34"]]
+       actual collection contained:    []
+       the missing elements were:      [["BasherThe Best of Nick Lowe", "11.98", "25"], ["Darlings of Wapping Wharf Launderette", "14.99", "50"], ["First Issue-Dinah Washington S", "22.98", "46"], ["Forty Years-Artistry of Tony B", "35.99", "87"], ["The Capitol Years", "34.99", "75"], ["The Greatest Hits", "22.99", "54"], ["Under the Table & Dreaming", "13.49", "34"]]
+     # ./spec/07a_joins_bonus_spec.rb:146:in `block (3 levels) in <top (required)>'
+
+  30) music JOINs top_track_counts selects the titles and track counts of large albums
+     Failure/Error: expect(top_track_counts).to eq([
+       
+       expected: [["Wagner - Der Ring des Nibelungen (Ring Cycle) / Si", "173"], ["Bing! His Legendary Years, 1931 to 1957 [BOX SET]", "101"], ["The Mel TormCollection [BOX SET]", "92"], ["Forty Years-Artistry of Tony B", "87"], ["The Capitol Years", "75"], ["The Greatest Hits", "54"], ["The Beatles (The White Album)", "53"], ["Darlings of Wapping Wharf Launderette", "50"], ["50 by Bobby Short", "50"], ["First Issue-Dinah Washington S", "46"]]
+            got: []
+       
+       (compared using ==)
+     # ./spec/07a_joins_bonus_spec.rb:160:in `block (3 levels) in <top (required)>'
+
+  31) music JOINs rock_superstars selects the name of the most prolific rock artist
+     Failure/Error: expect(rock_superstars).to contain_exactly(
+       expected collection contained:  [["The Beatles", "7"]]
+       actual collection contained:    []
+       the missing elements were:      [["The Beatles", "7"]]
+     # ./spec/07a_joins_bonus_spec.rb:177:in `block (3 levels) in <top (required)>'
+
+  32) music JOINs expensive_tastes selects the five genres that cost the most per track
+     Failure/Error: expect(expensive_tastes).to eq([
+       
+       expected: [["Styles > Classical > Forms & Genres > Theatrical, Incidental & Program Music > Incidental Music", "2.3557142857142857"], ["Styles > Classical > Historical Periods > Romantic (c.1820-1910) > Ballets & Dances", "2.3557142857142857"], ["Styles > Classical > Historical Periods > Romantic (c.1820-1910) > Forms & Genres > Theatrical, Inci", "2.3557142857142857"], ["Styles > Classical > Forms & Genres > Symphonies > Romantic", "1.8980000000000000"], ["Styles > Classical > Symphonies > General", "1.8980000000000000"]]
+            got: []
+       
+       (compared using ==)
+     # ./spec/07a_joins_bonus_spec.rb:185:in `block (3 levels) in <top (required)>'
+
+  33) using NULL null_dept selects teachers who have NULL as their department
+     Failure/Error: expect(null_dept).to contain_exactly(["Spiregrain"], ["Deadyawn"])
+       expected collection contained:  [["Deadyawn"], ["Spiregrain"]]
+       actual collection contained:    []
+       the missing elements were:      [["Deadyawn"], ["Spiregrain"]]
+     # ./spec/08_using_null_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  34) using NULL all_teachers_join displays all of the teachers in a joined table
+     Failure/Error: expect(all_teachers_join).to contain_exactly(
+       expected collection contained:  [["Cutflower", "Design"], ["Deadyawn", nil], ["Shrivell", "Computing"], ["Spiregrain", nil], ["Splint", "Computing"], ["Throd", "Computing"]]
+       actual collection contained:    []
+       the missing elements were:      [["Cutflower", "Design"], ["Deadyawn", nil], ["Shrivell", "Computing"], ["Spiregrain", nil], ["Splint", "Computing"], ["Throd", "Computing"]]
+     # ./spec/08_using_null_spec.rb:13:in `block (3 levels) in <top (required)>'
+
+  35) using NULL all_depts_join displays all of the departments in a joined table
+     Failure/Error: expect(all_depts_join).to contain_exactly(
+       expected collection contained:  [["Shrivell", "Computing"], ["Throd", "Computing"], ["Splint", "Computing"], ["Cutflower", "Design"], [nil, "Engineering"]]
+       actual collection contained:    []
+       the missing elements were:      [["Shrivell", "Computing"], ["Throd", "Computing"], ["Splint", "Computing"], ["Cutflower", "Design"], [nil, "Engineering"]]
+     # ./spec/08_using_null_spec.rb:26:in `block (3 levels) in <top (required)>'
+
+  36) using NULL teachers_and_mobiles displays teachers' mobile numbers, or a default if none exists
+     Failure/Error: expect(teachers_and_mobiles).to contain_exactly(
+       expected collection contained:  [["Cutflower", "07966 555 6574"], ["Deadyawn", "07986 444 2266"], ["Shrivell", "07966 555 1234"], ["Spiregrain", "07986 444 2266"], ["Splint", "07986 444 2266"], ["Throd", "07122 555 1920"]]
+       actual collection contained:    []
+       the missing elements were:      [["Cutflower", "07966 555 6574"], ["Deadyawn", "07986 444 2266"], ["Shrivell", "07966 555 1234"], ["Spiregrain", "07986 444 2266"], ["Splint", "07986 444 2266"], ["Throd", "07122 555 1920"]]
+     # ./spec/08_using_null_spec.rb:38:in `block (3 levels) in <top (required)>'
+
+  37) using NULL teachers_and_depts displays teachers and their departments, or 'None' if they have none
+     Failure/Error: expect(teachers_and_depts).to contain_exactly(
+       expected collection contained:  [["Cutflower", "Design"], ["Deadyawn", "None"], ["Shrivell", "Computing"], ["Spiregrain", "None"], ["Splint", "Computing"], ["Throd", "Computing"]]
+       actual collection contained:    []
+       the missing elements were:      [["Cutflower", "Design"], ["Deadyawn", "None"], ["Shrivell", "Computing"], ["Spiregrain", "None"], ["Splint", "Computing"], ["Throd", "Computing"]]
+     # ./spec/08_using_null_spec.rb:51:in `block (3 levels) in <top (required)>'
+
+  38) using NULL num_teachers_and_mobiles shows the number of teachers and the number of mobile numbers
+     Failure/Error: expect(num_teachers_and_mobiles).to contain_exactly(["6", "3"])
+       expected collection contained:  [["6", "3"]]
+       actual collection contained:    []
+       the missing elements were:      [["6", "3"]]
+     # ./spec/08_using_null_spec.rb:64:in `block (3 levels) in <top (required)>'
+
+  39) using NULL dept_staff_counts shows the name and number of staff of each department
+     Failure/Error: expect(dept_staff_counts).to contain_exactly(
+       expected collection contained:  [["Computing", "3"], ["Design", "1"], ["Engineering", "0"]]
+       actual collection contained:    []
+       the missing elements were:      [["Computing", "3"], ["Design", "1"], ["Engineering", "0"]]
+     # ./spec/08_using_null_spec.rb:70:in `block (3 levels) in <top (required)>'
+
+  40) using NULL teachers_and_divisions shows the name and division of teachers
+     Failure/Error: expect(teachers_and_divisions).to contain_exactly(
+       expected collection contained:  [["Cutflower", "Sci"], ["Deadyawn", "Art"], ["Shrivell", "Sci"], ["Spiregrain", "Art"], ["Splint", "Sci"], ["Throd", "Sci"]]
+       actual collection contained:    []
+       the missing elements were:      [["Cutflower", "Sci"], ["Deadyawn", "Art"], ["Shrivell", "Sci"], ["Spiregrain", "Art"], ["Splint", "Sci"], ["Throd", "Sci"]]
+     # ./spec/08_using_null_spec.rb:80:in `block (3 levels) in <top (required)>'
+
+  41) using NULL teachers_and_divisions_two shows the name and division of teachers, or 'None' if they have none
+     Failure/Error: expect(teachers_and_divisions_two).to contain_exactly(
+       expected collection contained:  [["Cutflower", "Sci"], ["Deadyawn", "None"], ["Shrivell", "Sci"], ["Spiregrain", "None"], ["Splint", "Sci"], ["Throd", "Sci"]]
+       actual collection contained:    []
+       the missing elements were:      [["Cutflower", "Sci"], ["Deadyawn", "None"], ["Shrivell", "Sci"], ["Spiregrain", "None"], ["Splint", "Sci"], ["Throd", "Sci"]]
+     # ./spec/08_using_null_spec.rb:93:in `block (3 levels) in <top (required)>'
+
+  42) self-JOIN exercises num_stops shows the number of stops in the table
+     Failure/Error: expect(num_stops).to contain_exactly(["246"])
+       expected collection contained:  [["246"]]
+       actual collection contained:    []
+       the missing elements were:      [["246"]]
+     # ./spec/09_self_joins_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+  43) self-JOIN exercises craiglockhart_id shows the ID of the stop Craiglockhart
+     Failure/Error: expect(craiglockhart_id).to contain_exactly(["53"])
+       expected collection contained:  [["53"]]
+       actual collection contained:    []
+       the missing elements were:      [["53"]]
+     # ./spec/09_self_joins_spec.rb:13:in `block (3 levels) in <top (required)>'
+
+  44) self-JOIN exercises lrt_stops shows the ids and names of stops on the 4 LRT service
+     Failure/Error: expect(lrt_stops).to contain_exactly(
+       expected collection contained:  [["115", "Haymarket"], ["117", "Hillend"], ["149", "London Road"], ["177", "Northfield"], ["179", "Oxgangs"], ["19", "Bingham"], ["194", "Princes Street"], ["53", "Craiglockhart"], ["85", "Fairmilehead"]]
+       actual collection contained:    []
+       the missing elements were:      [["115", "Haymarket"], ["117", "Hillend"], ["149", "London Road"], ["177", "Northfield"], ["179", "Oxgangs"], ["19", "Bingham"], ["194", "Princes Street"], ["53", "Craiglockhart"], ["85", "Fairmilehead"]]
+     # ./spec/09_self_joins_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+  45) self-JOIN exercises connecting_routes shows the routes that connect London Road with Craiglockhart
+     Failure/Error: expect(connecting_routes).to contain_exactly(
+       expected collection contained:  [["LRT", "4", "2"], ["LRT", "45", "2"]]
+       actual collection contained:    []
+       the missing elements were:      [["LRT", "4", "2"], ["LRT", "45", "2"]]
+     # ./spec/09_self_joins_spec.rb:35:in `block (3 levels) in <top (required)>'
+
+  46) self-JOIN exercises cl_to_lr shows routes from Craiglockhart to London Road
+     Failure/Error: expect(cl_to_lr).to contain_exactly(
+       expected collection contained:  [["LRT", "4", "53", "149"], ["LRT", "45", "53", "149"]]
+       actual collection contained:    []
+       the missing elements were:      [["LRT", "4", "53", "149"], ["LRT", "45", "53", "149"]]
+     # ./spec/09_self_joins_spec.rb:44:in `block (3 levels) in <top (required)>'
+
+  47) self-JOIN exercises cl_to_lr_by_name shows routes from Craiglockhart to London Road
+     Failure/Error: expect(cl_to_lr_by_name).to contain_exactly(
+       expected collection contained:  [["LRT", "4", "Craiglockhart", "London Road"], ["LRT", "45", "Craiglockhart", "London Road"]]
+       actual collection contained:    []
+       the missing elements were:      [["LRT", "4", "Craiglockhart", "London Road"], ["LRT", "45", "Craiglockhart", "London Road"]]
+     # ./spec/09_self_joins_spec.rb:53:in `block (3 levels) in <top (required)>'
+
+  48) self-JOIN exercises haymarket_and_leith shows services connecting Haymarket and Leith
+     Failure/Error: expect(haymarket_and_leith).to contain_exactly(
+       expected collection contained:  [["LRT", "12"], ["LRT", "2"], ["LRT", "22"], ["LRT", "25"], ["LRT", "2A"], ["SMT", "C5"]]
+       actual collection contained:    []
+       the missing elements were:      [["LRT", "12"], ["LRT", "2"], ["LRT", "22"], ["LRT", "25"], ["LRT", "2A"], ["SMT", "C5"]]
+     # ./spec/09_self_joins_spec.rb:62:in `block (3 levels) in <top (required)>'
+
+  49) self-JOIN exercises craiglockhart_and_tollcross shows services connecting Craiglockhart and Tollcross
+     Failure/Error: expect(craiglockhart_and_tollcross).to contain_exactly(
+       expected collection contained:  [["LRT", "10"], ["LRT", "27"], ["LRT", "45"], ["LRT", "47"]]
+       actual collection contained:    []
+       the missing elements were:      [["LRT", "10"], ["LRT", "27"], ["LRT", "45"], ["LRT", "47"]]
+     # ./spec/09_self_joins_spec.rb:75:in `block (3 levels) in <top (required)>'
+
+  50) self-JOIN exercises start_at_craiglockhart shows stops that can be reached by taking one bus from Craiglockhart
+     Failure/Error: expect(start_at_craiglockhart).to contain_exactly(
+       expected collection contained:  [["Balerno", "LRT", "47"], ["Balerno Church", "LRT", "47"], ["Bingham", "LRT", "4"], ["Brunstane", "LRT", "45"], ["Canonmills", "LRT", "27"], ["Canonmills", "LRT", "47"], ["Cockburn Crescent", "LRT", "47"], ["Colinton", "LRT", "10"], ["Colinton", "LRT", "45"], ["Colinton", "LRT", "47"], ["Craiglockhart", "LRT", "10"], ["Craiglockhart", "LRT", "27"], ["Craiglockhart", "LRT", "4"], ["Craiglockhart", "LRT", "45"], ["Craiglockhart", "LRT", "47"], ["Crewe Toll", "LRT", "27"], ["Currie", "LRT", "45"], ["Currie", "LRT", "47"], ["Duddingston", "LRT", "45"], ["Fairmilehead", "LRT", "4"], ["Hanover Street", "LRT", "27"], ["Hanover Street", "LRT", "45"], ["Hanover Street", "LRT", "47"], ["Haymarket", "LRT", "4"], ["Hillend", "LRT", "4"], ["Hunters Tryst", "LRT", "27"], ["Leith", "LRT", "10"], ["Leith Walk", "LRT", "10"], ["London Road", "LRT", "4"], ["London Road", "LRT", "45"], ["Muirhouse", "LRT", "10"], ["Newhaven", "LRT", "10"], ["Northfield", "LRT", "4"], ["Northfield", "LRT", "45"], ["Oxgangs", "LRT", "27"], ["Oxgangs", "LRT", "4"], ["Princes Street", "LRT", "10"], ["Princes Street", "LRT", "4"], ["Riccarton Campus", "LRT", "45"], ["Silverknowes", "LRT", "10"], ["Silverknowes", "LRT", "27"], ["Tollcross", "LRT", "10"], ["Tollcross", "LRT", "27"], ["Tollcross", "LRT", "45"], ["Tollcross", "LRT", "47"], ["Torphin", "LRT", "10"]]
+       actual collection contained:    []
+       the missing elements were:      [["Balerno", "LRT", "47"], ["Balerno Church", "LRT", "47"], ["Bingham", "LRT", "4"], ["Brunstane", "LRT", "45"], ["Canonmills", "LRT", "27"], ["Canonmills", "LRT", "47"], ["Cockburn Crescent", "LRT", "47"], ["Colinton", "LRT", "10"], ["Colinton", "LRT", "45"], ["Colinton", "LRT", "47"], ["Craiglockhart", "LRT", "10"], ["Craiglockhart", "LRT", "27"], ["Craiglockhart", "LRT", "4"], ["Craiglockhart", "LRT", "45"], ["Craiglockhart", "LRT", "47"], ["Crewe Toll", "LRT", "27"], ["Currie", "LRT", "45"], ["Currie", "LRT", "47"], ["Duddingston", "LRT", "45"], ["Fairmilehead", "LRT", "4"], ["Hanover Street", "LRT", "27"], ["Hanover Street", "LRT", "45"], ["Hanover Street", "LRT", "47"], ["Haymarket", "LRT", "4"], ["Hillend", "LRT", "4"], ["Hunters Tryst", "LRT", "27"], ["Leith", "LRT", "10"], ["Leith Walk", "LRT", "10"], ["London Road", "LRT", "4"], ["London Road", "LRT", "45"], ["Muirhouse", "LRT", "10"], ["Newhaven", "LRT", "10"], ["Northfield", "LRT", "4"], ["Northfield", "LRT", "45"], ["Oxgangs", "LRT", "27"], ["Oxgangs", "LRT", "4"], ["Princes Street", "LRT", "10"], ["Princes Street", "LRT", "4"], ["Riccarton Campus", "LRT", "45"], ["Silverknowes", "LRT", "10"], ["Silverknowes", "LRT", "27"], ["Tollcross", "LRT", "10"], ["Tollcross", "LRT", "27"], ["Tollcross", "LRT", "45"], ["Tollcross", "LRT", "47"], ["Torphin", "LRT", "10"]]
+     # ./spec/09_self_joins_spec.rb:86:in `block (3 levels) in <top (required)>'
+
+  51) self-JOIN exercises craiglockhart_to_sighthill shows routes involving two buses from Craiglockhart to Sighthill
+     Failure/Error: expect(craiglockhart_to_sighthill).to contain_exactly(
+       expected collection contained:  [["10", "LRT", "Colinton", "32", "LRT"], ["10", "LRT", "Colinton", "52", "LRT"], ["10", "LRT", "Leith", "22", "LRT"], ["10", "LRT", "Leith", "25", "LRT"], ["10", "LRT", "Leith", "32", "LRT"], ["10", "LRT", "Leith", "34", "LRT"], ["10", "LRT", "Leith", "35", "LRT"], ["10", "LRT", "Leith", "52", "LRT"], ["10", "LRT", "Leith", "C5", "SMT"], ["10", "LRT", "Leith Walk", "22", "LRT"], ["10", "LRT", "Leith Walk", "22A", "LRT"], ["10", "LRT", "Leith Walk", "25", "LRT"], ["10", "LRT", "Muirhouse", "32", "LRT"], ["10", "LRT", "Muirhouse", "52", "LRT"], ["10", "LRT", "Newhaven", "22", "LRT"], ["10", "LRT", "Newhaven", "25", "LRT"], ["10", "LRT", "Newhaven", "32", "LRT"], ["10", "LRT", "Newhaven", "52", "LRT"], ["10", "LRT", "Princes Street", "3", "LRT"], ["10", "LRT", "Princes Street", "30", "LRT"], ["10", "LRT", "Princes Street", "3A", "LRJ"], ["10", "LRT", "Princes Street", "65", "LRT"], ["10", "LRT", "Princes Street", "C5", "SMT"], ["10", "LRT", "Princes Street", "C70", "SMT"], ["27", "LRT", "Canonmills", "34", "LRT"], ["27", "LRT", "Canonmills", "35", "LRT"], ["27", "LRT", "Oxgangs", "32", "LRT"], ["27", "LRT", "Oxgangs", "52", "LRT"], ["4", "LRT", "Fairmilehead", "32", "LRT"], ["4", "LRT", "Fairmilehead", "52", "LRT"], ["4", "LRT", "Haymarket", "22", "LRT"], ["4", "LRT", "Haymarket", "22A", "LRT"], ["4", "LRT", "Haymarket", "25", "LRT"], ["4", "LRT", "Haymarket", "3", "LRT"], ["4", "LRT", "Haymarket", "30", "LRT"], ["4", "LRT", "Haymarket", "3A", "LRJ"], ["4", "LRT", "Haymarket", "61", "LRT"], ["4", "LRT", "Haymarket", "61", "SMT"], ["4", "LRT", "Haymarket", "65", "LRT"], ["4", "LRT", "Haymarket", "C5", "SMT"], ["4", "LRT", "Haymarket", "C70", "SMT"], ["4", "LRT", "London Road", "34", "LRT"], ["4", "LRT", "London Road", "35", "LRT"], ["4", "LRT", "London Road", "65", "LRT"], ["4", "LRT", "London Road", "C5", "SMT"], ["4", "LRT", "Oxgangs", "32", "LRT"], ["4", "LRT", "Oxgangs", "52", "LRT"], ["4", "LRT", "Princes Street", "3", "LRT"], ["4", "LRT", "Princes Street", "30", "LRT"], ["4", "LRT", "Princes Street", "3A", "LRJ"], ["4", "LRT", "Princes Street", "65", "LRT"], ["4", "LRT", "Princes Street", "C5", "SMT"], ["4", "LRT", "Princes Street", "C70", "SMT"], ["45", "LRT", "Brunstane", "32", "LRT"], ["45", "LRT", "Brunstane", "52", "LRT"], ["45", "LRT", "Colinton", "32", "LRT"], ["45", "LRT", "Colinton", "52", "LRT"], ["45", "LRT", "Currie", "61", "LRT"], ["45", "LRT", "London Road", "34", "LRT"], ["45", "LRT", "London Road", "35", "LRT"], ["45", "LRT", "London Road", "65", "LRT"], ["45", "LRT", "London Road", "C5", "SMT"], ["45", "LRT", "Riccarton Campus", "22A", "LRT"], ["45", "LRT", "Riccarton Campus", "61", "SMT"], ["45", "LRT", "Riccarton Campus", "65", "LRT"], ["47", "LRT", "Canonmills", "34", "LRT"], ["47", "LRT", "Canonmills", "35", "LRT"], ["47", "LRT", "Colinton", "32", "LRT"], ["47", "LRT", "Colinton", "52", "LRT"], ["47", "LRT", "Currie", "61", "LRT"]]
+       actual collection contained:    []
+       the missing elements were:      [["10", "LRT", "Colinton", "32", "LRT"], ["10", "LRT", "Colinton", "52", "LRT"], ["10", "LRT", "Leith", "22", "LRT"], ["10", "LRT", "Leith", "25", "LRT"], ["10", "LRT", "Leith", "32", "LRT"], ["10", "LRT", "Leith", "34", "LRT"], ["10", "LRT", "Leith", "35", "LRT"], ["10", "LRT", "Leith", "52", "LRT"], ["10", "LRT", "Leith", "C5", "SMT"], ["10", "LRT", "Leith Walk", "22", "LRT"], ["10", "LRT", "Leith Walk", "22A", "LRT"], ["10", "LRT", "Leith Walk", "25", "LRT"], ["10", "LRT", "Muirhouse", "32", "LRT"], ["10", "LRT", "Muirhouse", "52", "LRT"], ["10", "LRT", "Newhaven", "22", "LRT"], ["10", "LRT", "Newhaven", "25", "LRT"], ["10", "LRT", "Newhaven", "32", "LRT"], ["10", "LRT", "Newhaven", "52", "LRT"], ["10", "LRT", "Princes Street", "3", "LRT"], ["10", "LRT", "Princes Street", "30", "LRT"], ["10", "LRT", "Princes Street", "3A", "LRJ"], ["10", "LRT", "Princes Street", "65", "LRT"], ["10", "LRT", "Princes Street", "C5", "SMT"], ["10", "LRT", "Princes Street", "C70", "SMT"], ["27", "LRT", "Canonmills", "34", "LRT"], ["27", "LRT", "Canonmills", "35", "LRT"], ["27", "LRT", "Oxgangs", "32", "LRT"], ["27", "LRT", "Oxgangs", "52", "LRT"], ["4", "LRT", "Fairmilehead", "32", "LRT"], ["4", "LRT", "Fairmilehead", "52", "LRT"], ["4", "LRT", "Haymarket", "22", "LRT"], ["4", "LRT", "Haymarket", "22A", "LRT"], ["4", "LRT", "Haymarket", "25", "LRT"], ["4", "LRT", "Haymarket", "3", "LRT"], ["4", "LRT", "Haymarket", "30", "LRT"], ["4", "LRT", "Haymarket", "3A", "LRJ"], ["4", "LRT", "Haymarket", "61", "LRT"], ["4", "LRT", "Haymarket", "61", "SMT"], ["4", "LRT", "Haymarket", "65", "LRT"], ["4", "LRT", "Haymarket", "C5", "SMT"], ["4", "LRT", "Haymarket", "C70", "SMT"], ["4", "LRT", "London Road", "34", "LRT"], ["4", "LRT", "London Road", "35", "LRT"], ["4", "LRT", "London Road", "65", "LRT"], ["4", "LRT", "London Road", "C5", "SMT"], ["4", "LRT", "Oxgangs", "32", "LRT"], ["4", "LRT", "Oxgangs", "52", "LRT"], ["4", "LRT", "Princes Street", "3", "LRT"], ["4", "LRT", "Princes Street", "30", "LRT"], ["4", "LRT", "Princes Street", "3A", "LRJ"], ["4", "LRT", "Princes Street", "65", "LRT"], ["4", "LRT", "Princes Street", "C5", "SMT"], ["4", "LRT", "Princes Street", "C70", "SMT"], ["45", "LRT", "Brunstane", "32", "LRT"], ["45", "LRT", "Brunstane", "52", "LRT"], ["45", "LRT", "Colinton", "32", "LRT"], ["45", "LRT", "Colinton", "52", "LRT"], ["45", "LRT", "Currie", "61", "LRT"], ["45", "LRT", "London Road", "34", "LRT"], ["45", "LRT", "London Road", "35", "LRT"], ["45", "LRT", "London Road", "65", "LRT"], ["45", "LRT", "London Road", "C5", "SMT"], ["45", "LRT", "Riccarton Campus", "22A", "LRT"], ["45", "LRT", "Riccarton Campus", "61", "SMT"], ["45", "LRT", "Riccarton Campus", "65", "LRT"], ["47", "LRT", "Canonmills", "34", "LRT"], ["47", "LRT", "Canonmills", "35", "LRT"], ["47", "LRT", "Colinton", "32", "LRT"], ["47", "LRT", "Colinton", "52", "LRT"], ["47", "LRT", "Currie", "61", "LRT"]]
+     # ./spec/09_self_joins_spec.rb:139:in `block (3 levels) in <top (required)>'
+
+Finished in 0.63238 seconds (files took 0.24854 seconds to load)
+80 examples, 51 failures
+
+Failed examples:
+
+rspec ./spec/04a_countries_bonus_spec.rb:15 # countries bonus largest_in_continent selects the countries with the largest areas in their continents
+rspec ./spec/04a_countries_bonus_spec.rb:30 # countries bonus large_neighbors selects countries with much higher populations than their neighbors
+rspec ./spec/05_aggregates_spec.rb:45 # Aggregate queries country_counts shows the name and number of countries of each continent
+rspec ./spec/05_aggregates_spec.rb:60 # Aggregate queries populous_country_counts shows the number of populous countries for each continent
+rspec ./spec/05_aggregates_spec.rb:75 # Aggregate queries populous_continents shows the continents with total populations over 100 million
+rspec ./spec/06_joins_warmup_spec.rb:6 # JOIN warmup films_from_sixty_two selects films from the year 1962
+rspec ./spec/06_joins_warmup_spec.rb:18 # JOIN warmup year_of_kane selects the year that Citizen Kane was released
+rspec ./spec/06_joins_warmup_spec.rb:24 # JOIN warmup trek_films selects all Star Trek films and orders them by year
+rspec ./spec/06_joins_warmup_spec.rb:40 # JOIN warmup films_by_id selects the names of the films with the given IDs
+rspec ./spec/06_joins_warmup_spec.rb:50 # JOIN warmup glenn_close_id selects the ID of actress Glenn Close
+rspec ./spec/06_joins_warmup_spec.rb:56 # JOIN warmup casablanca_id selects the ID of the film Casablanca
+rspec ./spec/06_joins_warmup_spec.rb:62 # JOIN warmup casablanca_cast selects the cast of the film Casablanca
+rspec ./spec/06_joins_warmup_spec.rb:78 # JOIN warmup alien_cast selects the cast of the film Alien
+rspec ./spec/07_joins_exercises_spec.rb:6 # JOIN exercises ford_films selects films in which actor Harrison Ford played
+rspec ./spec/07_joins_exercises_spec.rb:38 # JOIN exercises ford_supporting_films selects films in which Harrison Ford played but did not lead
+rspec ./spec/07_joins_exercises_spec.rb:51 # JOIN exercises films_and_stars_from_sixty_two lists the titles and stars of all 1962 films
+rspec ./spec/07_joins_exercises_spec.rb:63 # JOIN exercises travoltas_busiest_years selects the year and number of movies of John Travolta's busy years
+rspec ./spec/07_joins_exercises_spec.rb:72 # JOIN exercises andrews_films_and_leads selects the titles and lead actors of films Julie Andrews played in
+rspec ./spec/07_joins_exercises_spec.rb:82 # JOIN exercises prolific_actors selects and orders the actors who have had at least 15 starring roles
+rspec ./spec/07_joins_exercises_spec.rb:98 # JOIN exercises films_by_cast_size selects 1978 films and orders by cast size
+rspec ./spec/07_joins_exercises_spec.rb:123 # JOIN exercises colleagues_of_garfunkel selects actors who have worked with Art Garfunkel
+rspec ./spec/07a_joins_bonus_spec.rb:6 # music JOINs alison_artist selects the artist who recorded 'Alison'
+rspec ./spec/07a_joins_bonus_spec.rb:14 # music JOINs exodus_artist selects the artist who recorded 'Exodus'
+rspec ./spec/07a_joins_bonus_spec.rb:22 # music JOINs blur_songs selects the songs on the album 'Blur'
+rspec ./spec/07a_joins_bonus_spec.rb:43 # music JOINs heart_tracks selects albums with songs containing the word 'Heart'
+rspec ./spec/07a_joins_bonus_spec.rb:82 # music JOINs title_tracks selects the names of all title tracks
+rspec ./spec/07a_joins_bonus_spec.rb:118 # music JOINs eponymous_albums selects the names of all eponymous albums
+rspec ./spec/07a_joins_bonus_spec.rb:129 # music JOINs song_title_counts selects the names and counts of songs that appear on more than two albums
+rspec ./spec/07a_joins_bonus_spec.rb:145 # music JOINs best_value selects the title, price, and track count of high-value albums
+rspec ./spec/07a_joins_bonus_spec.rb:159 # music JOINs top_track_counts selects the titles and track counts of large albums
+rspec ./spec/07a_joins_bonus_spec.rb:176 # music JOINs rock_superstars selects the name of the most prolific rock artist
+rspec ./spec/07a_joins_bonus_spec.rb:184 # music JOINs expensive_tastes selects the five genres that cost the most per track
+rspec ./spec/08_using_null_spec.rb:6 # using NULL null_dept selects teachers who have NULL as their department
+rspec ./spec/08_using_null_spec.rb:12 # using NULL all_teachers_join displays all of the teachers in a joined table
+rspec ./spec/08_using_null_spec.rb:25 # using NULL all_depts_join displays all of the departments in a joined table
+rspec ./spec/08_using_null_spec.rb:37 # using NULL teachers_and_mobiles displays teachers' mobile numbers, or a default if none exists
+rspec ./spec/08_using_null_spec.rb:50 # using NULL teachers_and_depts displays teachers and their departments, or 'None' if they have none
+rspec ./spec/08_using_null_spec.rb:63 # using NULL num_teachers_and_mobiles shows the number of teachers and the number of mobile numbers
+rspec ./spec/08_using_null_spec.rb:69 # using NULL dept_staff_counts shows the name and number of staff of each department
+rspec ./spec/08_using_null_spec.rb:79 # using NULL teachers_and_divisions shows the name and division of teachers
+rspec ./spec/08_using_null_spec.rb:92 # using NULL teachers_and_divisions_two shows the name and division of teachers, or 'None' if they have none
+rspec ./spec/09_self_joins_spec.rb:6 # self-JOIN exercises num_stops shows the number of stops in the table
+rspec ./spec/09_self_joins_spec.rb:12 # self-JOIN exercises craiglockhart_id shows the ID of the stop Craiglockhart
+rspec ./spec/09_self_joins_spec.rb:18 # self-JOIN exercises lrt_stops shows the ids and names of stops on the 4 LRT service
+rspec ./spec/09_self_joins_spec.rb:34 # self-JOIN exercises connecting_routes shows the routes that connect London Road with Craiglockhart
+rspec ./spec/09_self_joins_spec.rb:43 # self-JOIN exercises cl_to_lr shows routes from Craiglockhart to London Road
+rspec ./spec/09_self_joins_spec.rb:52 # self-JOIN exercises cl_to_lr_by_name shows routes from Craiglockhart to London Road
+rspec ./spec/09_self_joins_spec.rb:61 # self-JOIN exercises haymarket_and_leith shows services connecting Haymarket and Leith
+rspec ./spec/09_self_joins_spec.rb:74 # self-JOIN exercises craiglockhart_and_tollcross shows services connecting Craiglockhart and Tollcross
+rspec ./spec/09_self_joins_spec.rb:85 # self-JOIN exercises start_at_craiglockhart shows stops that can be reached by taking one bus from Craiglockhart
+rspec ./spec/09_self_joins_spec.rb:138 # self-JOIN exercises craiglockhart_to_sighthill shows routes involving two buses from Craiglockhart to Sighthill
+
+Finished in 0.63238 seconds (files took 0.24854 seconds to load)
+80 examples, 51 failures
+
+Failed examples:
+
+rspec ./spec/04a_countries_bonus_spec.rb:15 # countries bonus largest_in_continent selects the countries with the largest areas in their continents
+rspec ./spec/04a_countries_bonus_spec.rb:30 # countries bonus large_neighbors selects countries with much higher populations than their neighbors
+rspec ./spec/05_aggregates_spec.rb:45 # Aggregate queries country_counts shows the name and number of countries of each continent
+rspec ./spec/05_aggregates_spec.rb:60 # Aggregate queries populous_country_counts shows the number of populous countries for each continent
+rspec ./spec/05_aggregates_spec.rb:75 # Aggregate queries populous_continents shows the continents with total populations over 100 million
+rspec ./spec/06_joins_warmup_spec.rb:6 # JOIN warmup films_from_sixty_two selects films from the year 1962
+rspec ./spec/06_joins_warmup_spec.rb:18 # JOIN warmup year_of_kane selects the year that Citizen Kane was released
+rspec ./spec/06_joins_warmup_spec.rb:24 # JOIN warmup trek_films selects all Star Trek films and orders them by year
+rspec ./spec/06_joins_warmup_spec.rb:40 # JOIN warmup films_by_id selects the names of the films with the given IDs
+rspec ./spec/06_joins_warmup_spec.rb:50 # JOIN warmup glenn_close_id selects the ID of actress Glenn Close
+rspec ./spec/06_joins_warmup_spec.rb:56 # JOIN warmup casablanca_id selects the ID of the film Casablanca
+rspec ./spec/06_joins_warmup_spec.rb:62 # JOIN warmup casablanca_cast selects the cast of the film Casablanca
+rspec ./spec/06_joins_warmup_spec.rb:78 # JOIN warmup alien_cast selects the cast of the film Alien
+rspec ./spec/07_joins_exercises_spec.rb:6 # JOIN exercises ford_films selects films in which actor Harrison Ford played
+rspec ./spec/07_joins_exercises_spec.rb:38 # JOIN exercises ford_supporting_films selects films in which Harrison Ford played but did not lead
+rspec ./spec/07_joins_exercises_spec.rb:51 # JOIN exercises films_and_stars_from_sixty_two lists the titles and stars of all 1962 films
+rspec ./spec/07_joins_exercises_spec.rb:63 # JOIN exercises travoltas_busiest_years selects the year and number of movies of John Travolta's busy years
+rspec ./spec/07_joins_exercises_spec.rb:72 # JOIN exercises andrews_films_and_leads selects the titles and lead actors of films Julie Andrews played in
+rspec ./spec/07_joins_exercises_spec.rb:82 # JOIN exercises prolific_actors selects and orders the actors who have had at least 15 starring roles
+rspec ./spec/07_joins_exercises_spec.rb:98 # JOIN exercises films_by_cast_size selects 1978 films and orders by cast size
+rspec ./spec/07_joins_exercises_spec.rb:123 # JOIN exercises colleagues_of_garfunkel selects actors who have worked with Art Garfunkel
+rspec ./spec/07a_joins_bonus_spec.rb:6 # music JOINs alison_artist selects the artist who recorded 'Alison'
+rspec ./spec/07a_joins_bonus_spec.rb:14 # music JOINs exodus_artist selects the artist who recorded 'Exodus'
+rspec ./spec/07a_joins_bonus_spec.rb:22 # music JOINs blur_songs selects the songs on the album 'Blur'
+rspec ./spec/07a_joins_bonus_spec.rb:43 # music JOINs heart_tracks selects albums with songs containing the word 'Heart'
+rspec ./spec/07a_joins_bonus_spec.rb:82 # music JOINs title_tracks selects the names of all title tracks
+rspec ./spec/07a_joins_bonus_spec.rb:118 # music JOINs eponymous_albums selects the names of all eponymous albums
+rspec ./spec/07a_joins_bonus_spec.rb:129 # music JOINs song_title_counts selects the names and counts of songs that appear on more than two albums
+rspec ./spec/07a_joins_bonus_spec.rb:145 # music JOINs best_value selects the title, price, and track count of high-value albums
+rspec ./spec/07a_joins_bonus_spec.rb:159 # music JOINs top_track_counts selects the titles and track counts of large albums
+rspec ./spec/07a_joins_bonus_spec.rb:176 # music JOINs rock_superstars selects the name of the most prolific rock artist
+rspec ./spec/07a_joins_bonus_spec.rb:184 # music JOINs expensive_tastes selects the five genres that cost the most per track
+rspec ./spec/08_using_null_spec.rb:6 # using NULL null_dept selects teachers who have NULL as their department
+rspec ./spec/08_using_null_spec.rb:12 # using NULL all_teachers_join displays all of the teachers in a joined table
+rspec ./spec/08_using_null_spec.rb:25 # using NULL all_depts_join displays all of the departments in a joined table
+rspec ./spec/08_using_null_spec.rb:37 # using NULL teachers_and_mobiles displays teachers' mobile numbers, or a default if none exists
+rspec ./spec/08_using_null_spec.rb:50 # using NULL teachers_and_depts displays teachers and their departments, or 'None' if they have none
+rspec ./spec/08_using_null_spec.rb:63 # using NULL num_teachers_and_mobiles shows the number of teachers and the number of mobile numbers
+rspec ./spec/08_using_null_spec.rb:69 # using NULL dept_staff_counts shows the name and number of staff of each department
+rspec ./spec/08_using_null_spec.rb:79 # using NULL teachers_and_divisions shows the name and division of teachers
+rspec ./spec/08_using_null_spec.rb:92 # using NULL teachers_and_divisions_two shows the name and division of teachers, or 'None' if they have none
+rspec ./spec/09_self_joins_spec.rb:6 # self-JOIN exercises num_stops shows the number of stops in the table
+rspec ./spec/09_self_joins_spec.rb:12 # self-JOIN exercises craiglockhart_id shows the ID of the stop Craiglockhart
+rspec ./spec/09_self_joins_spec.rb:18 # self-JOIN exercises lrt_stops shows the ids and names of stops on the 4 LRT service
+rspec ./spec/09_self_joins_spec.rb:34 # self-JOIN exercises connecting_routes shows the routes that connect London Road with Craiglockhart
+rspec ./spec/09_self_joins_spec.rb:43 # self-JOIN exercises cl_to_lr shows routes from Craiglockhart to London Road
+rspec ./spec/09_self_joins_spec.rb:52 # self-JOIN exercises cl_to_lr_by_name shows routes from Craiglockhart to London Road
+rspec ./spec/09_self_joins_spec.rb:61 # self-JOIN exercises haymarket_and_leith shows services connecting Haymarket and Leith
+rspec ./spec/09_self_joins_spec.rb:74 # self-JOIN exercises craiglockhart_and_tollcross shows services connecting Craiglockhart and Tollcross
+rspec ./spec/09_self_joins_spec.rb:85 # self-JOIN exercises start_at_craiglockhart shows stops that can be reached by taking one bus from Craiglockhart
+rspec ./spec/09_self_joins_spec.rb:138 # self-JOIN exercises craiglockhart_to_sighthill shows routes involving two buses from Craiglockhart to Sighthill
+
+
