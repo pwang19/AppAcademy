@@ -1,19 +1,20 @@
 require_relative 'card.rb'
 
 class Board
+    attr_reader :rows
 
     def initialize(length, width)
-        @board = Array.new(width) { Array.new(length, :blank)}
+        @rows = Array.new(width) { Array.new(length, :blank)}
         @size = length * width
     end
 
     #populate should fill the board with a set of shuffled Card pairs
     def populate
         card_values = generate_card_values
-        (0..@board.length-1).each do |row|
-            (0..@board[0].length-1).each do |col|
+        (0..@rows.length-1).each do |row|
+            (0..@rows[0].length-1).each do |col|
                 randIndex = rand(card_values.length)
-                @board[row][col] = Card.new(card_values.delete_at(randIndex))
+                @rows[row][col] = Card.new(card_values.delete_at(randIndex))
             end
         end
     end
@@ -32,12 +33,12 @@ class Board
     #render should print out a representation of the Board's current state
     def render
         print ' '
-        (0..@board[0].length-1).each { |n| print ' ' + n.to_s }
+        (0..@rows[0].length-1).each { |n| print ' ' + n.to_s }
         p ''
-        (0..@board.length-1).each do |row|
+        (0..@rows.length-1).each do |row|
             print row.to_s
-            (0..@board[0].length-1).each do |col|
-                card = @board[row][col]
+            (0..@rows[0].length-1).each do |col|
+                card = @rows[row][col]
                 if card.to_s == nil
                     print ' 0'
                 elsif card.up 
@@ -51,7 +52,7 @@ class Board
     end
     #won? should return true if all cards have been revealed.
     def won?
-        @board.each do |row|
+        @rows.each do |row|
             row.each do |card|
                 return true if card.to_s == nil # in case the board has an odd number of positions
                 return false if card.up == false
@@ -62,12 +63,12 @@ class Board
 
     #reveal should reveal a Card at guessed_pos (unless it's already face-up, in which case the method should do nothing). It should also return the value of the card it revealed (you'll see why later).
     def reveal(guessed_pos)
-        card = @board[guessed_pos[0]][guessed_pos[1]]
+        card = @rows[guessed_pos[0]][guessed_pos[1]]
         card.reveal
         card
     end
 
     def getCard(position)
-        @board[position[0]][position[1]]
+        @rows[position[0]][position[1]]
     end
 end
